@@ -105,64 +105,6 @@ public class BadConsequence {
     }
    
     public BadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h){
-        /*BadConsequence mal_rollo;
-        int n_visibles, n_ocultos;
-
-        if(specificVisibleTreasures.isEmpty() && specificHiddenTreasures.isEmpty()){
-            if(v.size() > nVisibleTreasures)
-                n_visibles = nVisibleTreasures;
-            else
-                n_visibles = v.size();
-            
-            if(h.size() > nHiddenTreasures)
-                n_ocultos = nHiddenTreasures;
-            else
-                n_ocultos = h.size();
-            
-            mal_rollo = new BadConsequence(text, 0, n_visibles, n_ocultos);        
-        }
-        
-        else{
-            ArrayList<TreasureKind> ocultos = new ArrayList();
-            ArrayList<TreasureKind> visibles = new ArrayList();
-            
-            for(TreasureKind tipo : TreasureKind.values()){
-                int cont1=0, cont2=0;
-                
-                // Tesoros visibles
-                for(int i=0; i<specificVisibleTreasures.size(); i++){
-                    if(specificVisibleTreasures.get(i)==tipo)
-                        cont1++;
-                }
-                for(int i=0; i<v.size(); i++){
-                    if(v.get(i).getType()==tipo)
-                        cont2++;
-                }               
-                for(int i=0; i<Math.min(cont1, cont2); i++){
-                    visibles.add(tipo);
-                }
-                
-                cont1=cont2=0;
-                
-                // Tesoros ocultos
-                for(int i=0; i<specificHiddenTreasures.size(); i++){
-                    if(specificHiddenTreasures.get(i)==tipo)
-                        cont1++;
-                }
-                for(int i=0; i<h.size(); i++){
-                    if(h.get(i).getType()==tipo)
-                        cont2++;
-                }               
-                for(int i=0; i<Math.min(cont1, cont2); i++){
-                    ocultos.add(tipo);
-                }
-            }
-            
-            mal_rollo = new BadConsequence(text, 0, visibles, ocultos);
-        }
-        
-        return mal_rollo;
-        */
         BadConsequence bcAjustado;
         
         if(specificVisibleTreasures == null && specificHiddenTreasures == null){
