@@ -8,12 +8,14 @@ public class Monster{
     private int combat_level; 
     private Prize prize;
     private BadConsequence badConsequence;
+    private int levelChangeAgainstCultistPlayer=0;
    
-    public Monster(String nombre, int nivel, BadConsequence mr, Prize recompensa){
-        name=nombre;
-        combat_level=nivel;
-        prize=recompensa;
-        badConsequence=mr;
+    public Monster(String n, int l, BadConsequence bc, Prize p, int lC){
+        name=n;
+        combat_level=l;
+        badConsequence=bc;
+        prize=p;
+        levelChangeAgainstCultistPlayer=lC;
     }
  
     public String getName(){
@@ -24,7 +26,7 @@ public class Monster{
         return combat_level;
     }
  
-    public BadConsequence getBadConsequence() {
+    public BadConsequence getBadConsequence(){
         return badConsequence;
     }
    
@@ -34,6 +36,10 @@ public class Monster{
     
     public int getTreasuresGained(){
         return prize.getTreasures();
+    }
+    
+    public int getCombatLevelAgainstCultistPlayer(){
+        
     }
     
     public String toString(){

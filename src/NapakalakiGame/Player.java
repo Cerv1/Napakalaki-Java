@@ -26,6 +26,15 @@ public class Player {
         visibleTreasures = new ArrayList();
     }
     
+    public Player(Player p){
+        name=p.name;
+        level=p.level;
+        dead=p.dead;
+        canISteal=p.canISteal;
+        hiddenTreasures=p.hiddenTreasures;
+        visibleTreasures=p.visibleTreasures;
+    }
+    
     public String getName(){
         return name;
     }    
@@ -34,7 +43,7 @@ public class Player {
         dead = false;
     }
     
-    private int getCombatLevel(){
+    protected int getCombatLevel(){
         int nivel_total=level;
            
         for(Treasure visibleTreasure : visibleTreasures) {
@@ -154,9 +163,7 @@ public class Player {
     public boolean isDead(){
         return dead;
     }
-    
-    
-    
+
     public ArrayList<Treasure> getHiddenTreasures(){
         return hiddenTreasures;
     }
@@ -290,6 +297,14 @@ public class Player {
             discardHiddenTreasure(tesoro);
     }
     
+    protected int getOponentLevel(Monster m){
+        return m.getCombatLevel();
+    }
+    
+    protected boolean shouldConvert(){
+        return false; //temporal
+    }
+
     public String toString(){
         return name+"  CombatLevel -> ["+Integer.toString(getCombatLevel())+"]     PlayerLevel -> ["+Integer.toString(level)+"]";
     }

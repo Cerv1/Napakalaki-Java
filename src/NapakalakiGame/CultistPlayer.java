@@ -5,16 +5,17 @@
  */
 package NapakalakiGame;
 
-   
-public class CultistPlayer {
+public class CultistPlayer{
+    
     private static int totalCultistPlayers=0;
+    private Cultist myCultistCard;
     
     public CultistPlayer(Player p, Cultist c){
 	
     }
     
     protected int getCombatLevel(){
-        r
+        return 0; //temporal
     }
     
     protected int getOponentLevel(Monster m){
@@ -22,18 +23,18 @@ public class CultistPlayer {
     }
     
     protected boolean shouldConvert(){
-        
+        return false; //temporal
     }
     
     private Treasure giveMeATreasure(){
-     
-    }
-    
-    private boolean canYouGiveMeATreasure(){
         
     }
     
+    private boolean canYouGiveMeATreasure(){
+        return false; //temporal
+    }
+    
     public int getTotalCultistPlayers(){
-        return this.totalCultistPlayers;
+        return totalCultistPlayers;
     }
 }

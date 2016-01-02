@@ -10,7 +10,8 @@ public class CardDealer {
     private ArrayList<Monster> unusedMonsters;
     private ArrayList<Monster> usedMonsters;
     private ArrayList<Treasure> unusedTreasures;
-    private ArrayList<Treasure> usedTreasures;    
+    private ArrayList<Treasure> usedTreasures;  
+    private ArrayList<Cultist> unusedCultists;
          
     public static CardDealer getInstance(){
         if(instance==null)
@@ -208,11 +209,11 @@ public class CardDealer {
     }
     
     private void shuffleMonsters(){
-         Collections.shuffle(unusedMonsters);
+        Collections.shuffle(unusedMonsters);
     }
     
     private void shuffleCultists(){
-        
+        Collections.shuffle(unusedCultists);
     }
   
     public Treasure nextTreasure(){       
