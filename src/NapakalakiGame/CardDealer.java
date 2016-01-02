@@ -199,6 +199,10 @@ public class CardDealer {
                 
     }
     
+    private void initCultistCardDeck(){
+        
+    }
+    
     private void shuffleTreasures(){
         Collections.shuffle(unusedTreasures);
     }
@@ -206,9 +210,12 @@ public class CardDealer {
     private void shuffleMonsters(){
          Collections.shuffle(unusedMonsters);
     }
-  
-    public Treasure nextTreasure(){
+    
+    private void shuffleCultists(){
         
+    }
+  
+    public Treasure nextTreasure(){       
         if(unusedTreasures.isEmpty()){
             ArrayList<Treasure> aux = unusedTreasures;
             unusedTreasures=usedTreasures;        
@@ -221,8 +228,7 @@ public class CardDealer {
         return aux;
     }
     
-    public Monster nextMonster(){
-        
+    public Monster nextMonster(){       
         if(unusedMonsters.isEmpty()){
             ArrayList<Monster> aux=unusedMonsters;
             unusedMonsters=usedMonsters;
@@ -233,6 +239,10 @@ public class CardDealer {
         Monster aux = unusedMonsters.get(0);
         unusedMonsters.remove(aux);
         return aux;
+    }
+    
+    public Cultist nextCultist(){
+        return null;
     }
     
     public void giveTreasureBack(Treasure t){
