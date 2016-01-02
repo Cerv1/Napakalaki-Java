@@ -12,4 +12,28 @@ public class CultistPlayer {
     public CultistPlayer(Player p, Cultist c){
 	
     }
+    
+    protected int getCombatLevel(){
+        r
+    }
+    
+    protected int getOponentLevel(Monster m){
+        return m.getBadConsequence().getLevels();
+    }
+    
+    protected boolean shouldConvert(){
+        
+    }
+    
+    private Treasure giveMeATreasure(){
+     
+    }
+    
+    private boolean canYouGiveMeATreasure(){
+        
+    }
+    
+    public int getTotalCultistPlayers(){
+        return this.totalCultistPlayers;
+    }
 }
