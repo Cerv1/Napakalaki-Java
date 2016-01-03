@@ -23,15 +23,15 @@ public class CultistPlayer extends Player{
     
    
     protected int getCombatLevel(){
-        return 0; //temporal
+        return this.getLevels();
     }
     
     protected int getOponentLevel(Monster m){
-        return m.getBadConsequence().getLevels();
+        return (m.getBadConsequence().getLevels()+m.getCombatLevelAgainstCultistPlayer());
     }
     
     protected boolean shouldConvert(){
-        return false; //temporal
+        return false;
     }
     
     private Treasure giveMeATreasure(){
@@ -42,7 +42,7 @@ public class CultistPlayer extends Player{
         return false; //temporal
     }
     
-    public int getTotalCultistPlayers(){
+    public static int getTotalCultistPlayers(){
         return totalCultistPlayers;
     }
 }

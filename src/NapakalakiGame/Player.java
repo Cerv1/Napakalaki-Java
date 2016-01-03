@@ -182,6 +182,8 @@ public class Player {
             else
                 return CombatResult.WIN;
         }   
+        else if(shouldConvert())
+                return CombatResult.LOSEANDCONVERT;
         else{
             applyBadConsequence(m);
             return CombatResult.LOSE;
@@ -302,7 +304,11 @@ public class Player {
     }
     
     protected boolean shouldConvert(){
-        return false; //temporal
+        Dice dado = Dice.getInstance();
+        if(dado.nextNumber()==1) 
+            return true;
+        else
+            return false;
     }
 
     public String toString(){
