@@ -5,15 +5,23 @@
  */
 package NapakalakiGame;
 
-public class CultistPlayer{
+/**
+ *
+ * @author Usuario
+ */
+public class CultistPlayer extends Player{
     
     private static int totalCultistPlayers=0;
     private Cultist myCultistCard;
+
     
     public CultistPlayer(Player p, Cultist c){
-	
+        super(p);
+        this.myCultistCard=c;
+        totalCultistPlayers++;
     }
     
+   
     protected int getCombatLevel(){
         return 0; //temporal
     }
@@ -38,3 +46,4 @@ public class CultistPlayer{
         return totalCultistPlayers;
     }
 }
+
