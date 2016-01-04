@@ -4,7 +4,7 @@ package NapakalakiGame;
 
 import java.util.*;
 
-public class Player {
+public class Player{
     
     private final int MAXLEVEL = 10;
     private String name;
@@ -48,8 +48,7 @@ public class Player {
            
         for(Treasure visibleTreasure : visibleTreasures) {
             nivel_total += visibleTreasure.getBonus();
-        }
-               
+        }               
         return nivel_total;
     }
     

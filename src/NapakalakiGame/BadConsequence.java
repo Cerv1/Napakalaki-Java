@@ -5,7 +5,7 @@ package NapakalakiGame;
 import static java.lang.StrictMath.min;
 import java.util.*;
 
-public class BadConsequence {
+public class BadConsequence{
     static  final int MAXTREASURES=10;
     private String text;
     private int levels;
@@ -17,17 +17,16 @@ public class BadConsequence {
     private ArrayList<TreasureKind> specificVisibleTreasures;
     
     public boolean isEmpty(){
-            boolean empty=false;
-            if(nHiddenTreasures==-1){
-                 if(specificHiddenTreasures.isEmpty() && specificVisibleTreasures.isEmpty() && levels==0 && death==false)
-                    empty=true;
+        boolean empty=false;
+        if(nHiddenTreasures==-1){
+            if(specificHiddenTreasures.isEmpty() && specificVisibleTreasures.isEmpty() && levels==0 && death==false)
+                empty=true;
             }
             else{
                 if(levels==0 && death==false)
                     empty=true;
-            }
-               
-            return empty;
+            }              
+        return empty;
     }
     
     public int getLevels(){
@@ -58,7 +57,7 @@ public class BadConsequence {
         if(nHiddenTreasures == -1 && nVisibleTreasures == -1){
             for(int i=0; i<specificVisibleTreasures.size(); i++){
                 if(t.getType() == specificVisibleTreasures.get(i))
-                     specificVisibleTreasures.remove(i);
+                    specificVisibleTreasures.remove(i);
             }
         }
         else
@@ -67,10 +66,10 @@ public class BadConsequence {
     
     public void substractHiddenTreasure(Treasure t){
         if(nHiddenTreasures == -1 && nVisibleTreasures == -1){
-             for(int i=0; i<specificHiddenTreasures.size(); i++){
-                  if(t.getType() == specificHiddenTreasures.get(i))
-                      specificHiddenTreasures.remove(i);
-             }
+            for(int i=0; i<specificHiddenTreasures.size(); i++){
+                if(t.getType() == specificHiddenTreasures.get(i))
+                    specificHiddenTreasures.remove(i);
+            }
         }
         else
             nHiddenTreasures--;
@@ -148,8 +147,7 @@ public class BadConsequence {
                 
                 for(int i = 0; i< min(jugador,badC); i++)
                     listaAjustadaHidden.add(tKind);
-            }
-            
+            }           
             bcAjustado = new BadConsequence(text, 0, listaAjustadaVisibles, listaAjustadaHidden);
             
         }
@@ -177,4 +175,3 @@ public class BadConsequence {
         }      
     }   
 }
-

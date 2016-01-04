@@ -4,7 +4,7 @@ package NapakalakiGame;
 
 import java.util.*;
 
-public class CardDealer {
+public class CardDealer{
     
     private static CardDealer instance = null;
     private ArrayList<Monster> unusedMonsters;
@@ -278,7 +278,7 @@ public class CardDealer {
             unusedMonsters=usedMonsters;
             usedMonsters=aux;
             shuffleMonsters();
-         }
+        }
              
         Monster aux = unusedMonsters.get(0);
         unusedMonsters.remove(aux);
