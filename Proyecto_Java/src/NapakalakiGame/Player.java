@@ -4,7 +4,7 @@ package NapakalakiGame;
 
 import java.util.*;
 
-public class Player{
+public class Player {
     
     private final int MAXLEVEL = 10;
     private String name;
@@ -35,6 +35,18 @@ public class Player{
         visibleTreasures=p.visibleTreasures;
     }
     
+    protected Player getEnemy(){
+        return enemy;
+    }
+    
+    protected ArrayList<Treasure> getHiddenTreasures(){
+        return hiddenTreasures;
+    }
+    
+    protected ArrayList<Treasure> getVisibleTreasures(){
+        return visibleTreasures;
+    }
+    
     public String getName(){
         return name;
     }    
@@ -48,7 +60,8 @@ public class Player{
            
         for(Treasure visibleTreasure : visibleTreasures) {
             nivel_total += visibleTreasure.getBonus();
-        }               
+        }
+               
         return nivel_total;
     }
     
@@ -163,17 +176,18 @@ public class Player{
         return dead;
     }
 
-    public ArrayList<Treasure> getHiddenTreasures(){
+ 
+    public ArrayList<Treasure> getHiddenTreasuresList(){
         return hiddenTreasures;
     }
     
-    public ArrayList<Treasure> getVisibleTreasures(){
+    public ArrayList<Treasure> getVisibleTreasuresList(){
         return visibleTreasures;
     }
     
     public CombatResult combat(Monster m){
         int myLevel = this.getCombatLevel();
-        int monsterLevel = m.getCombatLevel();
+        int monsterLevel =this.getOponentLevel(m);
         if(myLevel > monsterLevel){
             applyPrize(m);
             if(getLevels()>=MAXLEVEL)

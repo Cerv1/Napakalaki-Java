@@ -80,6 +80,11 @@ public class Napakalaki{
    
     public CombatResult developCombat(){
         CombatResult resultado = currentPlayer.combat(currentMonster);
+        if(resultado==CombatResult.LOSEANDCONVERT){
+            CultistPlayer newCultistPlayer = new CultistPlayer(currentPlayer, dealer.nextCultist());
+            currentPlayer=newCultistPlayer;
+            //Falta cambiarlo del enemies.
+        }
         dealer.giveMonsterBack(currentMonster);
         return resultado;
     }
