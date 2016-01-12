@@ -6,7 +6,7 @@ import static java.lang.StrictMath.min;
 import java.util.*;
 
 public class BadConsequence {
-    static  final int MAXTREASURES=10;
+
     private String text;
     private int levels;
     private boolean death;

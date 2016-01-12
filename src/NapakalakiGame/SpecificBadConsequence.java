@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author cervi
  */
 public class SpecificBadConsequence extends BadConsequence{
-    
+
     private ArrayList<TreasureKind> specificHiddenTreasures;
     private ArrayList<TreasureKind> specificVisibleTreasures;
     
@@ -33,39 +33,32 @@ public class SpecificBadConsequence extends BadConsequence{
     }
     
 
-     public void substractHiddenTreasure(Treasure t){
-         if(specificHiddenTreasures!=null){
+    public void substractHiddenTreasure(Treasure t){
+        if(specificHiddenTreasures!=null){
             for(int i=0; i<specificHiddenTreasures.size(); i++){
-                    if(t.getType() == specificHiddenTreasures.get(i))
-                        specificHiddenTreasures.remove(i);
+                if(t.getType() == specificHiddenTreasures.get(i))
+                    specificHiddenTreasures.remove(i);
             }
         }
-     }
+    }
      
   
-     public void substractVisibleTreasure(Treasure t){
-         if(specificVisibleTreasures!=null){
+    public void substractVisibleTreasure(Treasure t){
+        if(specificVisibleTreasures!=null){
             for(int i=0; i<specificVisibleTreasures.size(); i++){
-                    if(t.getType() == specificVisibleTreasures.get(i))
-                        specificVisibleTreasures.remove(i);
+                if(t.getType() == specificVisibleTreasures.get(i))
+                    specificVisibleTreasures.remove(i);
             }
         }
-     }
+    }
      
-     public boolean isEmpty(){
-         return (specificVisibleTreasures.isEmpty() == 0 && specificHiddenTreasures.isEmpty() == 0 );
-     }
+    public boolean isEmpty(){
+        return (specificVisibleTreasures.isEmpty() && specificHiddenTreasures.isEmpty());
+    }
     
     public SpecificBadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h){
         SpecificBadConsequence bcAjustado;
-        /*
-        if(specificVisibleTreasures == null && specificHiddenTreasures == null){
-            int nVisible = (v.size() > nVisibleTreasures ? nVisibleTreasures : v.size());
-            int nHidden = (h.size() > nHiddenTreasures ? nHiddenTreasures : h.size());
-            bcAjustado = new BadConsequence(text, 0, nVisible,nHidden);
-        }
-        else{
-          */  
+ 
             ArrayList<TreasureKind> listaAjustadaVisibles = new ArrayList();
             ArrayList<TreasureKind> listaAjustadaHidden = new ArrayList();
             
@@ -103,8 +96,7 @@ public class SpecificBadConsequence extends BadConsequence{
             }
             
             bcAjustado = new SpecificBadConsequence(getText(), 0, listaAjustadaVisibles, listaAjustadaHidden);
-            
-        
+                  
         return bcAjustado;
     }
     
