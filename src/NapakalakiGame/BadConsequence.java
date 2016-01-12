@@ -22,6 +22,22 @@ public class BadConsequence {
     public String getText(){
         return text;
     }
+    
+    public boolean isEmpty(){
+        
+    }
+    
+    public void substractVisibleTreasure(Treasure t){
+        
+    }
+    
+    public void substractHiddenTreasure(Treasure t){
+        
+    }
+    
+    public BadConsequence adjustToFitTreasureLists(BadConsequence bc){
+        
+    }
  
     public BadConsequence(String texto, int niveles){
         levels=niveles;
