@@ -60,4 +60,12 @@ public class NumericBadConsequence  extends BadConsequence{
         BadConsequence bcAjustado = new NumericBadConsequence(getText(), getLevels(), nVis, nHid);
         return bcAjustado;
     }
+    
+    @Override 
+    public String toString(){
+        String info=super.toString();
+        info+= "\nNúmero de tesoros visibles: " + nHiddenTreasures + ""
+                +"\nNúmero de tesoros ocultos: " + nHiddenTreasures +"\n";
+        return info;
+    }
 }

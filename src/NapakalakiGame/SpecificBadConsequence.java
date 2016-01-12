@@ -98,4 +98,11 @@ public class SpecificBadConsequence extends BadConsequence{
         return bcAjustado;
     }
     
+    @Override 
+    public String toString(){
+        String info=super.toString();
+        info+="\nTesoros visibles específicos: "+specificVisibleTreasures +
+                "\nTesoros ocultos específicos: "+specificHiddenTreasures+"\n"; 
+        return info;
+    }
 }

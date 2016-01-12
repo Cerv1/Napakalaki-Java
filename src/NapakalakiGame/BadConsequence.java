@@ -28,5 +28,11 @@ public abstract class BadConsequence {
    public abstract void substractHiddenTreasure (Treasure t);
    public abstract BadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h);
  
+    @Override
+    public String toString(){
+        String info=text;
+        info += "\nNúmero de niveles a perder: " + levels;
+        return info;
+    }
 }
 

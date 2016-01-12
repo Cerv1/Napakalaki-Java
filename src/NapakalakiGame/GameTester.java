@@ -60,8 +60,8 @@ public class GameTester {
             do { // Hasta que se avance de turno 
               System.out.println ("******* ******* ******* ******* ******* ******* *******");
               System.out.println ("\n\n Turno de: " + currentPlayer.toString());
-              if (currentPlayer.canISteal())
-                command = getCommandAfterFighting();
+             if (currentPlayer.canISteal()){
+                command = getCommandAfterFighting();}
               else 
                 command = getCommandAfterFightingNoSteal();
               command = processCommand (command, currentPlayer);
