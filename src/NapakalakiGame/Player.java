@@ -105,7 +105,7 @@ public class Player {
         TreasureKind type=t.getType();
         int tesoros_onehand=0;
        
-        //CASCO
+        //HELMET
         if(type == TreasureKind.HELMET){
             for(Treasure treasure : visibleTreasures){
                 if(treasure.getType() == TreasureKind.HELMET)
@@ -113,7 +113,7 @@ public class Player {
             }
             return true;
         }
-        //PECHERA
+        //ARMOR
         else if(type == TreasureKind.ARMOR){
             for(Treasure treasure : visibleTreasures){
                 if(treasure.getType() == TreasureKind.ARMOR)
@@ -121,7 +121,7 @@ public class Player {
             }
             return true;
         }
-        //MANASA
+        //ONEHAND
         else if(type == TreasureKind.ONEHAND){
             for(Treasure treasure : visibleTreasures){
                 if(treasure.getType() == TreasureKind.ONEHAND)
@@ -137,7 +137,7 @@ public class Player {
               return true;
             }
         }
-        //MANASAS
+        //BOTHHANDS
         else if(type == TreasureKind.BOTHHANDS){
             for(Treasure treasure : visibleTreasures){
                 if(treasure.getType() == TreasureKind.BOTHHANDS || treasure.getType() == TreasureKind.ONEHAND)
@@ -145,7 +145,7 @@ public class Player {
             }
             return true;
         }
-        //ALPARGATA
+        //SHOE
         else{
             for(Treasure treasure : visibleTreasures){
                 if(treasure.getType() == TreasureKind.SHOE)

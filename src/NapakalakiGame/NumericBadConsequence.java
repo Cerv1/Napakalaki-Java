@@ -25,14 +25,14 @@ public class NumericBadConsequence  extends BadConsequence{
     }
     
      public void substractVisibleTreasure(){
-         nVisibleTreasures--;
+        nVisibleTreasures--;
      }
      
      public void substractHiddenTreasure(){
-         nHiddenTreasures--;
+        nHiddenTreasures--;
      }
      
      public boolean isEmpty(){
-         return (nVisibleTreasures==0 && nHiddenTreasures==0);
+        return (nVisibleTreasures==0 && nHiddenTreasures==0);
      }
 }

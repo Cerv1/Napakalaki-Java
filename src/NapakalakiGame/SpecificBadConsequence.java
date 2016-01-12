@@ -29,7 +29,6 @@ public class SpecificBadConsequence extends BadConsequence{
         return specificVisibleTreasures;
     }
     
-
     public void substractHiddenTreasure(Treasure t){
         if(specificHiddenTreasures!=null){
             for(int i=0; i<specificHiddenTreasures.size(); i++){
@@ -38,8 +37,7 @@ public class SpecificBadConsequence extends BadConsequence{
             }
         }
     }
-     
-  
+      
     public void substractVisibleTreasure(Treasure t){
         if(specificVisibleTreasures!=null){
             for(int i=0; i<specificVisibleTreasures.size(); i++){
