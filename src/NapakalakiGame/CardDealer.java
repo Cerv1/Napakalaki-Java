@@ -121,7 +121,10 @@ public class CardDealer {
         Prize P4 = new Prize(4,1);
         unusedMonsters.add(new Monster("Ángeles de la noche ibicenca", 14, BC4, P4,0));
         
-        BadConsequence BC5 = new SpecificBadConsequence("Pierdes todos tus tesoros visibles", 0, BadConsequence.MAXTREASURES, null);
+        BadConsequence BC5 = new SpecificBadConsequence("Pierdes todos tus tesoros visibles", 0,
+                             new ArrayList(Arrays.asList(TreasureKind.ARMOR, TreasureKind.BOTHHANDS,
+                             TreasureKind.HELMET, TreasureKind.ONEHAND, TreasureKind.ONEHAND,
+                             TreasureKind.SHOE)), new ArrayList());
         Prize P5 = new Prize(3,1);
         unusedMonsters.add(new Monster("El gorrón en el umbral", 10, BC5, P5,0));
                         
@@ -205,7 +208,10 @@ public class CardDealer {
         Prize P20 = new Prize(3,1);
         unusedMonsters.add(new Monster("El mal indecible impronunciable",10,B20,P20,-2));
         
-        BadConsequence B21 = new SpecificBadConsequence("Pierdes tus tesoros visibles. Jajaja",0,new ArrayList(), new ArrayList());
+        BadConsequence B21 = new SpecificBadConsequence("Pierdes tus tesoros visibles. Jajaja",0,
+                             new ArrayList(Arrays.asList(TreasureKind.ARMOR, TreasureKind.BOTHHANDS,
+                             TreasureKind.HELMET, TreasureKind.ONEHAND, TreasureKind.ONEHAND,
+                             TreasureKind.SHOE)), new ArrayList());
         Prize P21 = new Prize(2,1);
         unusedMonsters.add(new Monster("Testigos oculares.",6,B21,P21,+2));
         
