@@ -5,8 +5,11 @@
  */
 package NapakalakiGame;
 
+import java.util.ArrayList;
+
 
 public class NumericBadConsequence  extends BadConsequence{
+    
     private int nVisibleTreasures;
     private int nHiddenTreasures;
       
@@ -24,15 +27,37 @@ public class NumericBadConsequence  extends BadConsequence{
         return nHiddenTreasures;
     }
     
-    public void substractVisibleTreasure(){
+    @Override
+    public void substractVisibleTreasure(Treasure t){
         nVisibleTreasures--;
     }
      
-    public void substractHiddenTreasure(){
+   @Override
+    public void substractHiddenTreasure(Treasure t){
         nHiddenTreasures--;
     }
      
+    @Override
     public boolean isEmpty(){
         return (nVisibleTreasures==0 && nHiddenTreasures==0);
+    }
+
+    @Override
+    public BadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h) {
+        int nVis, nHid;
+        
+        if(nVisibleTreasures>v.size())
+            nVis=nVisibleTreasures;
+        else
+            nVis=v.size();
+        
+        if(nHiddenTreasures>h.size())
+            nHid=nHiddenTreasures;
+        else
+            nHid=h.size();
+       
+        
+        BadConsequence bcAjustado = new NumericBadConsequence(getText(), getLevels(), nVis, nHid);
+        return bcAjustado;
     }
 }

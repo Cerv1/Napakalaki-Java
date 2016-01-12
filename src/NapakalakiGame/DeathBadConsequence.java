@@ -14,5 +14,8 @@ public class DeathBadConsequence extends NumericBadConsequence{
         super(t, 0, -1, -1);
         death=true;
     }
+       public boolean getDeath(){
+        return death;
+    }
     
 }

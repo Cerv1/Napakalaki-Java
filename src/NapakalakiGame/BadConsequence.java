@@ -5,44 +5,28 @@ package NapakalakiGame;
 import static java.lang.StrictMath.min;
 import java.util.*;
 
-public class BadConsequence {
+public abstract class BadConsequence {
 
     private String text;
     private int levels;
-    private boolean death;
   
+    public BadConsequence(String texto, int niveles){
+        levels=niveles;
+        text=texto;
+    }  
+    
     public int getLevels(){
         return levels;
-    }
-    
-    public boolean getDeath(){
-        return death;
     }
     
     public String getText(){
         return text;
     }
     
-    public boolean isEmpty(){
-        
-    }
-    
-    public void substractVisibleTreasure(Treasure t){
-        
-    }
-    
-    public void substractHiddenTreasure(Treasure t){
-        
-    }
-    
-    public BadConsequence adjustToFitTreasureLists(BadConsequence bc){
-        
-    }
+   public abstract boolean isEmpty();
+   public abstract void substractVisibleTreasure (Treasure t);
+   public abstract void substractHiddenTreasure (Treasure t);
+   public abstract BadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h);
  
-    public BadConsequence(String texto, int niveles){
-        levels=niveles;
-        text=texto;
-        death=false;
-    }  
 }
 

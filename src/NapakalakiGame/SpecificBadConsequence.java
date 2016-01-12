@@ -17,8 +17,7 @@ public class SpecificBadConsequence extends BadConsequence{
     public SpecificBadConsequence(String t,  int nivel, ArrayList<TreasureKind> sH, ArrayList<TreasureKind> sV){
         super(t,nivel);
         specificHiddenTreasures=sH;
-        specificVisibleTreasures=sV;
-        
+        specificVisibleTreasures=sV;      
     }
         
     public ArrayList<TreasureKind> getSpecificHiddenTreasures(){
@@ -29,6 +28,7 @@ public class SpecificBadConsequence extends BadConsequence{
         return specificVisibleTreasures;
     }
     
+    @Override
     public void substractHiddenTreasure(Treasure t){
         if(specificHiddenTreasures!=null){
             for(int i=0; i<specificHiddenTreasures.size(); i++){
@@ -37,7 +37,8 @@ public class SpecificBadConsequence extends BadConsequence{
             }
         }
     }
-      
+    
+    @Override
     public void substractVisibleTreasure(Treasure t){
         if(specificVisibleTreasures!=null){
             for(int i=0; i<specificVisibleTreasures.size(); i++){
@@ -46,12 +47,14 @@ public class SpecificBadConsequence extends BadConsequence{
             }
         }
     }
-     
+    
+     @Override
     public boolean isEmpty(){
         return (specificVisibleTreasures.isEmpty() && specificHiddenTreasures.isEmpty());
     }
     
-    public SpecificBadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h){
+    @Override
+    public BadConsequence adjustToFitTreasureLists(ArrayList<Treasure> v, ArrayList<Treasure> h){
         SpecificBadConsequence bcAjustado;
  
             ArrayList<TreasureKind> listaAjustadaVisibles = new ArrayList();
@@ -90,7 +93,7 @@ public class SpecificBadConsequence extends BadConsequence{
                     listaAjustadaHidden.add(tKind);
             }
             
-            bcAjustado = new SpecificBadConsequence(getText(), 0, listaAjustadaVisibles, listaAjustadaHidden);
+            bcAjustado = new SpecificBadConsequence(getText(), getLevels(), listaAjustadaVisibles, listaAjustadaHidden);
                   
         return bcAjustado;
     }
