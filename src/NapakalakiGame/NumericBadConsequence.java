@@ -5,10 +5,7 @@
  */
 package NapakalakiGame;
 
-/**
- *
- * @author cervi
- */
+
 public class NumericBadConsequence  extends BadConsequence{
     private int nVisibleTreasures;
     private int nHiddenTreasures;

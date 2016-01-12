@@ -8,10 +8,7 @@ package NapakalakiGame;
 import static java.lang.StrictMath.min;
 import java.util.ArrayList;
 
-/**
- *
- * @author cervi
- */
+
 public class SpecificBadConsequence extends BadConsequence{
 
     private ArrayList<TreasureKind> specificHiddenTreasures;
