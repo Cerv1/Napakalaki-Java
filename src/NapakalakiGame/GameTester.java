@@ -44,6 +44,7 @@ public class GameTester {
         } while (command != Command.Exit && command != Command.Combat);
         if (command == Command.Combat) {
           combatResult = game.developCombat();
+          currentPlayer = game.getCurrentPlayer();
           switch (combatResult) {
             case WINGAME : 
               System.out.println ("\n\n       " + currentPlayer.getName());
