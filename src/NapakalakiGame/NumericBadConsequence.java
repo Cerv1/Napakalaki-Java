@@ -64,7 +64,7 @@ public class NumericBadConsequence  extends BadConsequence{
     @Override 
     public String toString(){
         String info=super.toString();
-        info+= "\nNúmero de tesoros visibles: " + nHiddenTreasures + ""
+        info+= "\nNúmero de tesoros visibles: " + nVisibleTreasures + ""
                 +"\nNúmero de tesoros ocultos: " + nHiddenTreasures +"\n";
         return info;
     }
