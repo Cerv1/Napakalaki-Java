@@ -57,7 +57,7 @@ public class NumericBadConsequence  extends BadConsequence{
             nHid=h.size();
        
         
-        BadConsequence bcAjustado = new NumericBadConsequence(getText(), getLevels(), nVis, nHid);
+        BadConsequence bcAjustado = new NumericBadConsequence(getText(),0, nVis, nHid);
         return bcAjustado;
     }
     

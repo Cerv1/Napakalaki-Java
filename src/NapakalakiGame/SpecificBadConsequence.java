@@ -14,7 +14,7 @@ public class SpecificBadConsequence extends BadConsequence{
     private ArrayList<TreasureKind> specificHiddenTreasures;
     private ArrayList<TreasureKind> specificVisibleTreasures;
     
-    public SpecificBadConsequence(String t,  int nivel, ArrayList<TreasureKind> sH, ArrayList<TreasureKind> sV){
+    public SpecificBadConsequence(String t,  int nivel, ArrayList<TreasureKind> sV, ArrayList<TreasureKind> sH){
         super(t,nivel);
         specificHiddenTreasures=sH;
         specificVisibleTreasures=sV;      
@@ -93,7 +93,9 @@ public class SpecificBadConsequence extends BadConsequence{
                     listaAjustadaHidden.add(tKind);
             }
             
-            bcAjustado = new SpecificBadConsequence(getText(), getLevels(), listaAjustadaVisibles, listaAjustadaHidden);
+            
+            
+            bcAjustado = new SpecificBadConsequence(getText(), 0, listaAjustadaVisibles, listaAjustadaHidden);
                   
         return bcAjustado;
     }
