@@ -16,12 +16,15 @@ public class Prize{
         return treasures;
     }
     
+
     public int getLevel(){
         return level;
     }
     
+    @Override
     public String toString(){
-        return "\nTreasures = " + Integer.toString(treasures)
+        String text= "Treasures = " + Integer.toString(treasures)
                 + "\nlevels = " + Integer.toString(level);
+        return text;
     }
 }

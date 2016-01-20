@@ -5,7 +5,7 @@ package NapakalakiGame;
 import java.util.*;
 
 public class CardDealer {
-    
+   
     private static CardDealer instance = null;
     private ArrayList<Monster> unusedMonsters;
     private ArrayList<Monster> usedMonsters;
