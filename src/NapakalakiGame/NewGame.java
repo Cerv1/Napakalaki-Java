@@ -6,12 +6,9 @@
 package NapakalakiGame;
 import GUI.NapakalakiView;
 import GUI.Dice;
-/**
- *
- * @author cervi
- */
+
 public class NewGame {
-        
+       
        public static void main(String[] args){
            Napakalaki game=Napakalaki.getInstance();
            NapakalakiView napakalakiView = new NapakalakiView();
