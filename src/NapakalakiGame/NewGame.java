@@ -17,6 +17,7 @@ public class NewGame {
            NapakalakiView napakalakiView = new NapakalakiView();
            Dice.createInstance(napakalakiView);
            napakalakiView.setNapakalaki(game);
+           
            napakalakiView.setVisible(true);
        }
 }
