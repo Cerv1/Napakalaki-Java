@@ -3,7 +3,8 @@
 package NapakalakiGame;
 
 import java.util.*;
-
+import GUI.Dice;
+        
 public class Player {
     
     private final int MAXLEVEL = 10;
