@@ -2,6 +2,7 @@
 package GUI;
 
 import NapakalakiGame.Treasure;
+import java.awt.Color;
 
 public class TreasureView extends javax.swing.JPanel{
     
@@ -106,6 +107,10 @@ public class TreasureView extends javax.swing.JPanel{
       selected=false;
     else
       selected=true;
+    
+      this.setBackground(Color.red);
+      this.setOpaque(selected);
+      repaint();
   }//GEN-LAST:event_formMouseClicked
 
 
