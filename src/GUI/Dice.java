@@ -8,7 +8,7 @@ import javax.swing.Timer;
 
 /**
  *
- * @author fvelasco
+ * @author 
  */
 public class Dice extends javax.swing.JDialog{
   

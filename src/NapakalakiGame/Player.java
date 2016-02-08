@@ -28,12 +28,12 @@ public class Player {
     }
     
     public Player(Player p){
-        name=p.name;
-        level=p.level;
-        dead=p.dead;
-        canISteal=p.canISteal;
-        hiddenTreasures=p.hiddenTreasures;
-        visibleTreasures=p.visibleTreasures;
+        this.name=p.name;
+        this.level=p.level;
+        this.dead=p.dead;
+        this.canISteal=p.canISteal;
+        this.hiddenTreasures=p.hiddenTreasures;
+        this.visibleTreasures=p.visibleTreasures;
     }
     
     protected Player getEnemy(){
