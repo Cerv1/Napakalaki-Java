@@ -36,21 +36,21 @@ public class BadConsequenceView extends javax.swing.JPanel{
     this.setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
-        .addGap(47, 47, 47)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addContainerGap(174, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
           .addComponent(L_BadConsequenceText, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(L_BadConsequenceLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(261, Short.MAX_VALUE))
+        .addGap(58, 58, 58))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGap(40, 40, 40)
+        .addGap(20, 20, 20)
         .addComponent(L_BadConsequenceLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(18, 18, 18)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
         .addComponent(L_BadConsequenceText, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(170, Short.MAX_VALUE))
+        .addGap(44, 44, 44))
     );
 
     L_BadConsequenceLevel.getAccessibleContext().setAccessibleName("L_BadConsequenceLevel");

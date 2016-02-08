@@ -18,23 +18,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="B_StealTreasure" max="32767" attributes="0"/>
-                  <Component id="visibleTreasures" max="32767" attributes="0"/>
-                  <Component id="L_PlayerEnemy" max="32767" attributes="0"/>
-                  <Component id="L_PlayerName" max="32767" attributes="0"/>
-                  <Component id="hiddenTreasures" alignment="0" max="32767" attributes="0"/>
-                  <Component id="B_DiscardTreasure" alignment="0" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="badConsequenceView1" min="-2" pref="190" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="B_StealTreasure" max="32767" attributes="0"/>
+                          <Component id="visibleTreasures" max="32767" attributes="0"/>
+                          <Component id="L_PlayerEnemy" max="32767" attributes="0"/>
+                          <Component id="L_PlayerName" max="32767" attributes="0"/>
+                          <Component id="hiddenTreasures" alignment="0" max="32767" attributes="0"/>
+                          <Component id="B_DiscardTreasure" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="B_MakeVisible" max="32767" attributes="0"/>
+                          <Component id="L_PlayerLevel" max="32767" attributes="0"/>
+                          <Component id="B_DiscardAllTreasures" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Component id="L_PlayerCombatLevel" min="-2" pref="95" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="B_MakeVisible" max="32767" attributes="0"/>
-                  <Component id="L_PlayerLevel" max="32767" attributes="0"/>
-                  <Component id="B_DiscardAllTreasures" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-              <Component id="L_PlayerCombatLevel" min="-2" pref="95" max="-2" attributes="0"/>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -53,7 +58,9 @@
               <Component id="visibleTreasures" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="hiddenTreasures" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="badConsequenceView1" min="-2" pref="132" max="-2" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="B_StealTreasure" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="B_MakeVisible" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
@@ -63,7 +70,7 @@
                   <Component id="B_DiscardTreasure" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="B_DiscardAllTreasures" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -163,6 +170,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_DiscardAllTreasuresActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="GUI.BadConsequenceView" name="badConsequenceView1">
     </Component>
   </SubComponents>
 </Form>
