@@ -23,9 +23,7 @@
                   <Component id="L_MonsterCombatLevel" min="-2" pref="96" max="-2" attributes="0"/>
                   <Component id="L_MonsterName" min="-2" pref="96" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="prizeView1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="232" max="32767" attributes="0"/>
+              <EmptySpace pref="378" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -33,15 +31,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="L_MonsterName" min="-2" pref="36" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="L_MonsterCombatLevel" min="-2" pref="36" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="prizeView1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="L_MonsterName" min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="L_MonsterCombatLevel" min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Component id="L_MonsterBadConsequence" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace pref="133" max="32767" attributes="0"/>
           </Group>
@@ -63,8 +56,6 @@
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_MonsterBadConsequence"/>
       </AccessibilityProperties>
-    </Component>
-    <Component class="GUI.PrizeView" name="prizeView1">
     </Component>
   </SubComponents>
 </Form>

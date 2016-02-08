@@ -40,7 +40,6 @@ public class MonsterView extends javax.swing.JPanel{
     L_MonsterName = new javax.swing.JLabel();
     L_MonsterCombatLevel = new javax.swing.JLabel();
     L_MonsterBadConsequence = new javax.swing.JLabel();
-    prizeView1 = new GUI.PrizeView();
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
@@ -52,21 +51,16 @@ public class MonsterView extends javax.swing.JPanel{
           .addComponent(L_MonsterBadConsequence, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(L_MonsterName, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(18, 18, 18)
-        .addComponent(prizeView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(232, Short.MAX_VALUE))
+        .addContainerGap(378, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGap(41, 41, 41)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(layout.createSequentialGroup()
-            .addComponent(L_MonsterName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18)
-            .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addComponent(prizeView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(38, 38, 38)
+        .addComponent(L_MonsterName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(18, 18, 18)
+        .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(72, 72, 72)
         .addComponent(L_MonsterBadConsequence, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap(133, Short.MAX_VALUE))
     );
@@ -81,6 +75,5 @@ public class MonsterView extends javax.swing.JPanel{
   private javax.swing.JLabel L_MonsterBadConsequence;
   private javax.swing.JLabel L_MonsterCombatLevel;
   private javax.swing.JLabel L_MonsterName;
-  private GUI.PrizeView prizeView1;
   // End of variables declaration//GEN-END:variables
 }
