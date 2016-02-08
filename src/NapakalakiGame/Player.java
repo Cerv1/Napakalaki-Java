@@ -78,7 +78,11 @@ public class Player {
     }
     
     private void setPendingBadConsequence(BadConsequence b){
-        pendingBadConsequence=b;
+      pendingBadConsequence=b;
+    }
+    
+    public BadConsequence getPendingBadConsequence(){
+      return pendingBadConsequence;
     }
     
     private void applyPrize(Monster m){

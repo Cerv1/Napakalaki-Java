@@ -7,7 +7,6 @@ package GUI;
 
 import NapakalakiGame.Treasure;
 
-
 public class TreasureView extends javax.swing.JPanel{
     
     Treasure treasureModel;
@@ -15,12 +14,12 @@ public class TreasureView extends javax.swing.JPanel{
      * Creates new form TreasureView
      */
     public TreasureView() {
-        initComponents();
+      initComponents();
     }
 
     public void setTreasure(Treasure T){
-        treasureModel=T;
-        repaint();
+      treasureModel=T;
+      repaint();
     }
 
     /**
