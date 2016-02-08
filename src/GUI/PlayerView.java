@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 public class PlayerView extends javax.swing.JPanel{
     
     public Player playerModel;
-    public BadConsequenceView badConsequenceModel;
+    public BadConsequenceView badConsequenceModel=new BadConsequenceView();
     private Napakalaki napakalakiModel;
     
     public PlayerView(){
@@ -25,7 +25,13 @@ public class PlayerView extends javax.swing.JPanel{
     }
     
     public void setNapakalakiModel(Napakalaki n){
-        napakalakiModel=n;
+        this.napakalakiModel=n;
+        System.out.println(napakalakiModel.getCurrentPlayer().getName());
+        System.out.println(napakalakiModel.getCurrentPlayer().getHiddenTreasures());
+    }
+    
+    public Napakalaki getNapakalakiModel(){
+        return napakalakiModel;
     }
     
     private ArrayList<Treasure> getSelectedTreasures(JPanel aPanel){
@@ -56,8 +62,7 @@ public class PlayerView extends javax.swing.JPanel{
         this.fillTreasurePanel(P_VisibleTreasures, playerModel.getVisibleTreasures());
         this.fillTreasurePanel(P_HiddenTreasures, playerModel.getHiddenTreasures());
         BadConsequence bc=playerModel.getPendingBadConsequence();
-        
-       // badConsequenceModel.setBadConsequence(bc);
+        badConsequenceModel.setBadConsequence(bc);
         repaint();
         revalidate();
     }
@@ -228,10 +233,8 @@ public class PlayerView extends javax.swing.JPanel{
 
     private void B_MakeVisibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MakeVisibleActionPerformed
         ArrayList<Treasure> selHidden = this.getSelectedTreasures(P_HiddenTreasures);
-            napakalakiModel.makeTreasuresVisible(selHidden);
-        
+        napakalakiModel.makeTreasureVisible(selHidden);
         setPlayer(napakalakiModel.getCurrentPlayer());
-        
     }//GEN-LAST:event_B_MakeVisibleActionPerformed
 
     private void B_DiscardTreasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_DiscardTreasureActionPerformed
