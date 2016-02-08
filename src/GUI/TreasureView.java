@@ -20,6 +20,7 @@ public class TreasureView extends javax.swing.JPanel {
 
     public void setTreasure(Treasure T){
         treasureModel=T;
+        repaint();
     }
 
     /**
