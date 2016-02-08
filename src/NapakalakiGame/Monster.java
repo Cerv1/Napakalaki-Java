@@ -38,6 +38,10 @@ public class Monster{
         return prize.getTreasures();
     }
     
+    public Prize getPrize(){
+      return prize;
+    }
+    
     public int getCombatLevelAgainstCultistPlayer(){
         return (this.getCombatLevel()+levelChangeAgainstCultistPlayer);
     }

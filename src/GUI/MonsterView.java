@@ -5,11 +5,15 @@
  */
 package GUI;
 
+import NapakalakiGame.BadConsequence;
 import NapakalakiGame.Monster;
+import NapakalakiGame.Prize;
 
 public class MonsterView extends javax.swing.JPanel{
 
   Monster monsterModel;
+  PrizeView prizeModel;
+  BadConsequenceView badConsequenceModel;
   
   public MonsterView(){
     initComponents();
@@ -17,6 +21,10 @@ public class MonsterView extends javax.swing.JPanel{
   
   public void setMonster(Monster m){
     monsterModel=m;
+    Prize p=m.getPrize();
+    prizeModel.setPrize(p);
+    BadConsequence bc=m.getBadConsequence();
+    badConsequenceModel.setBadConsequence(bc);
     repaint();
   }
 
@@ -29,19 +37,50 @@ public class MonsterView extends javax.swing.JPanel{
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
+    L_MonsterName = new javax.swing.JLabel();
+    L_MonsterCombatLevel = new javax.swing.JLabel();
+    L_MonsterBadConsequence = new javax.swing.JLabel();
+    prizeView1 = new GUI.PrizeView();
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 400, Short.MAX_VALUE)
+      .addGroup(layout.createSequentialGroup()
+        .addGap(47, 47, 47)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addComponent(L_MonsterBadConsequence, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(L_MonsterName, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(18, 18, 18)
+        .addComponent(prizeView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(232, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 300, Short.MAX_VALUE)
+      .addGroup(layout.createSequentialGroup()
+        .addGap(41, 41, 41)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(L_MonsterName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18)
+            .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(prizeView1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(38, 38, 38)
+        .addComponent(L_MonsterBadConsequence, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(133, Short.MAX_VALUE))
     );
+
+    L_MonsterName.getAccessibleContext().setAccessibleName("L_MonsterName");
+    L_MonsterCombatLevel.getAccessibleContext().setAccessibleName("L_MonsterCombatLevel");
+    L_MonsterBadConsequence.getAccessibleContext().setAccessibleName("L_MonsterBadConsequence");
   }// </editor-fold>//GEN-END:initComponents
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JLabel L_MonsterBadConsequence;
+  private javax.swing.JLabel L_MonsterCombatLevel;
+  private javax.swing.JLabel L_MonsterName;
+  private GUI.PrizeView prizeView1;
   // End of variables declaration//GEN-END:variables
 }
