@@ -40,11 +40,11 @@ public class Player {
         return enemy;
     }
     
-    protected ArrayList<Treasure> getHiddenTreasures(){
+    public ArrayList<Treasure> getHiddenTreasures(){
         return hiddenTreasures;
     }
     
-    protected ArrayList<Treasure> getVisibleTreasures(){
+    public ArrayList<Treasure> getVisibleTreasures(){
         return visibleTreasures;
     }
     

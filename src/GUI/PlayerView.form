@@ -19,23 +19,29 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="B_StealTreasure" max="32767" attributes="0"/>
                   <Component id="visibleTreasures" max="32767" attributes="0"/>
-                  <Component id="L_PlayerEnemy" pref="95" max="32767" attributes="0"/>
+                  <Component id="L_PlayerEnemy" max="32767" attributes="0"/>
                   <Component id="L_PlayerName" max="32767" attributes="0"/>
-                  <Component id="hiddenTreasures" alignment="0" pref="95" max="32767" attributes="0"/>
+                  <Component id="hiddenTreasures" alignment="0" max="32767" attributes="0"/>
+                  <Component id="B_DiscardTreasure" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Component id="L_PlayerLevel" min="-2" pref="95" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="B_MakeVisible" max="32767" attributes="0"/>
+                  <Component id="L_PlayerLevel" max="32767" attributes="0"/>
+                  <Component id="B_DiscardAllTreasures" alignment="0" max="32767" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
               <Component id="L_PlayerCombatLevel" min="-2" pref="95" max="-2" attributes="0"/>
-              <EmptySpace pref="94" max="32767" attributes="0"/>
+              <EmptySpace pref="38" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="69" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="L_PlayerLevel" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="L_PlayerCombatLevel" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
@@ -47,7 +53,17 @@
               <Component id="visibleTreasures" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="hiddenTreasures" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="B_StealTreasure" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="B_MakeVisible" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="B_DiscardTreasure" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="B_DiscardAllTreasures" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="37" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -101,5 +117,52 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
     </Container>
+    <Component class="javax.swing.JButton" name="B_StealTreasure">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Steal Treasure"/>
+        <Property name="actionCommand" type="java.lang.String" value="StealTreasure"/>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="B_StealTreasure"/>
+      </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_StealTreasureActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="B_DiscardTreasure">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Discard Treasure"/>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="B_DiscardTreasure"/>
+      </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_DiscardTreasureActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="B_MakeVisible">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Make Visible"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="actionCommand" type="java.lang.String" value="MakeVisible"/>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="B_MakeVisible"/>
+      </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_MakeVisibleActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="B_DiscardAllTreasures">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Discard All Treasures"/>
+      </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="B_DiscardAllTreasures"/>
+      </AccessibilityProperties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_DiscardAllTreasuresActionPerformed"/>
+      </Events>
+    </Component>
   </SubComponents>
 </Form>
