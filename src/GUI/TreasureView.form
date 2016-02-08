@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <Events>
+    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="formMouseClicked"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -19,7 +22,7 @@
           <Group type="102" attributes="0">
               <Component id="jLabel1" min="-2" pref="75" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="L_TreasureName" pref="264" max="32767" attributes="0"/>
+              <Component id="L_TreasureName" pref="212" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Component id="jLabel3" min="-2" pref="75" max="-2" attributes="0"/>
@@ -50,6 +53,7 @@
                   <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="L_TreasureType" alignment="1" min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace pref="288" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
