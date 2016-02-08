@@ -6,6 +6,9 @@
 package GUI;
 
 import NapakalakiGame.Player;
+import NapakalakiGame.Treasure;
+import java.util.ArrayList;
+import javax.swing.JPanel;
 
 
 public class PlayerView extends javax.swing.JPanel{
@@ -18,6 +21,18 @@ public class PlayerView extends javax.swing.JPanel{
     
     public void setPlayer(Player p){
         playerModel=p;
+    }
+    
+    private void fillTreasurePanel(JPanel aPanel, ArrayList<Treasure> aList){
+        aPanel.removeAll();
+        for(Treasure t : aList){
+            TreasureView aTreasureView = new TreasureView();
+            aTreasureView.setTreasure(t);
+            aTreasureView.setVisible(true);
+            aPanel.add(aTreasureView);
+        }
+        aPanel.repaint();
+        aPanel.revalidate();
     }
 
     /**
