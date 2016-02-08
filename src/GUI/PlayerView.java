@@ -11,7 +11,7 @@ import NapakalakiGame.Player;
  *
  * @author cervi
  */
-public class PlayerView extends javax.swing.JPanel {
+public class PlayerView extends javax.swing.JPanel{
     
     Player playerModel;
     
@@ -33,11 +33,11 @@ public class PlayerView extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 598, Short.MAX_VALUE)
+            .addGap(0, 525, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 418, Short.MAX_VALUE)
+            .addGap(0, 380, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
