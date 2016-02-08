@@ -38,9 +38,6 @@ public class TreasureView extends javax.swing.JPanel{
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    jLabel1 = new javax.swing.JLabel();
-    jLabel2 = new javax.swing.JLabel();
-    jLabel3 = new javax.swing.JLabel();
     L_TreasureName = new javax.swing.JLabel();
     L_TreasureBonus = new javax.swing.JLabel();
 
@@ -49,15 +46,6 @@ public class TreasureView extends javax.swing.JPanel{
         formMouseClicked(evt);
       }
     });
-
-    jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-    jLabel1.setText("Name");
-
-    jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-    jLabel2.setText("Bonus");
-
-    jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-    jLabel3.setText("Type");
 
     L_TreasureName.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
 
@@ -68,29 +56,20 @@ public class TreasureView extends javax.swing.JPanel{
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-          .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addGap(18, 18, 18)
+        .addGap(75, 75, 75)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-            .addGap(0, 44, Short.MAX_VALUE)
+            .addGap(0, 229, Short.MAX_VALUE)
             .addComponent(L_TreasureName, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addComponent(L_TreasureBonus, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel1)
-          .addComponent(L_TreasureName))
+        .addComponent(L_TreasureName)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(L_TreasureBonus))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(L_TreasureBonus)
+        .addGap(57, 57, 57))
     );
 
     L_TreasureName.getAccessibleContext().setAccessibleName("L_TreasureName");
@@ -108,8 +87,5 @@ public class TreasureView extends javax.swing.JPanel{
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel L_TreasureBonus;
   private javax.swing.JLabel L_TreasureName;
-  private javax.swing.JLabel jLabel1;
-  private javax.swing.JLabel jLabel2;
-  private javax.swing.JLabel jLabel3;
   // End of variables declaration//GEN-END:variables
 }
