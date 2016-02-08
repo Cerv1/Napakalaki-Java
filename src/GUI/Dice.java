@@ -10,7 +10,7 @@ import javax.swing.Timer;
  *
  * @author fvelasco
  */
-public class Dice extends javax.swing.JDialog {
+public class Dice extends javax.swing.JDialog{
   
   private static Dice instance = null;
   private Random generator=new Random();

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 
 
-public class PlayerNamesCapture extends javax.swing.JDialog {
+public class PlayerNamesCapture extends javax.swing.JDialog{
 
     ArrayList<String> names = new ArrayList();
     

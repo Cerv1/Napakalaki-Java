@@ -8,11 +8,11 @@ package GUI;
 import NapakalakiGame.BadConsequence;
 
 
-public class BadConsequenceView extends javax.swing.JPanel {
+public class BadConsequenceView extends javax.swing.JPanel{
 
   BadConsequence badConsequenceModel;
     
-  public BadConsequenceView() {
+  public BadConsequenceView(){
     initComponents();
   }
     

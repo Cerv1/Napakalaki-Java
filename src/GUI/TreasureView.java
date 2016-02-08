@@ -8,7 +8,7 @@ package GUI;
 import NapakalakiGame.Treasure;
 
 
-public class TreasureView extends javax.swing.JPanel {
+public class TreasureView extends javax.swing.JPanel{
     
     Treasure treasureModel;
     /**
