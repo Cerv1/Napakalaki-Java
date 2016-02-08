@@ -7,19 +7,17 @@ package GUI;
 
 import NapakalakiGame.Player;
 
-/**
- *
- * @author cervi
- */
+
 public class PlayerView extends javax.swing.JPanel{
     
     Player playerModel;
     
-    /**
-     * Creates new form PlayerView
-     */
     public PlayerView() {
         initComponents();
+    }
+    
+    public void setPlayer(Player p){
+        playerModel=p;
     }
 
     /**
@@ -29,19 +27,66 @@ public class PlayerView extends javax.swing.JPanel{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        L_PlayerName = new javax.swing.JLabel();
+        L_PlayerCombatLevel = new javax.swing.JLabel();
+        L_PlayerLevel = new javax.swing.JLabel();
+        L_PlayerEnemy = new javax.swing.JLabel();
+        visibleTreasures = new javax.swing.JPanel();
+        hiddenTreasures = new javax.swing.JPanel();
+
+        visibleTreasures.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        hiddenTreasures.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 525, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(visibleTreasures, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(L_PlayerEnemy, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
+                    .addComponent(L_PlayerName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hiddenTreasures, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))
+                .addGap(54, 54, 54)
+                .addComponent(L_PlayerLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
+                .addComponent(L_PlayerCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(69, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(L_PlayerLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(L_PlayerCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(L_PlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(L_PlayerEnemy, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(visibleTreasures, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(hiddenTreasures, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(122, 122, 122))
         );
+
+        L_PlayerName.getAccessibleContext().setAccessibleName("L_PlayerName");
+        L_PlayerCombatLevel.getAccessibleContext().setAccessibleName("L_PlayerCombatLevel");
+        L_PlayerLevel.getAccessibleContext().setAccessibleName("L_PlayerLevel");
+        L_PlayerEnemy.getAccessibleContext().setAccessibleName("L_PlayerEnemy");
+        visibleTreasures.getAccessibleContext().setAccessibleName("visibleTreasures");
+        hiddenTreasures.getAccessibleContext().setAccessibleName("hiddenTreasures");
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel L_PlayerCombatLevel;
+    private javax.swing.JLabel L_PlayerEnemy;
+    private javax.swing.JLabel L_PlayerLevel;
+    private javax.swing.JLabel L_PlayerName;
+    private javax.swing.JPanel hiddenTreasures;
+    private javax.swing.JPanel visibleTreasures;
     // End of variables declaration//GEN-END:variables
 }
