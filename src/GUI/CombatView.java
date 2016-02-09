@@ -18,13 +18,16 @@ public class CombatView extends javax.swing.JPanel {
         L_LOSE.setVisible(false);
         L_WIN.setVisible(false);
         L_WINGAME.setVisible(false);
+        
     }
     
     public void setCombatView(CombatResult cr){
         if(cr==CombatResult.LOSE){
             L_LOSE.setVisible(true);
-            L_WIN.setVisible(false);
-            L_WINGAME.setVisible(false);
+            repaint();
+            delay();
+            L_LOSE.setVisible(false);
+            repaint();
         }
         else if(cr==CombatResult.WIN){
             L_WIN.setVisible(true);
@@ -36,6 +39,9 @@ public class CombatView extends javax.swing.JPanel {
             delay();
             System.exit(0);
         }
+        
+        repaint();
+        revalidate();
     }
     
     public static void delay(){
