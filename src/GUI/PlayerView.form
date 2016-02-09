@@ -130,7 +130,9 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="visibleTreasures"/>
       </AccessibilityProperties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
     </Container>
     <Container class="javax.swing.JPanel" name="P_HiddenTreasures">
       <Properties>
@@ -144,7 +146,9 @@
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="hiddenTreasures"/>
       </AccessibilityProperties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
     </Container>
     <Component class="javax.swing.JButton" name="B_StealTreasure">
       <Properties>

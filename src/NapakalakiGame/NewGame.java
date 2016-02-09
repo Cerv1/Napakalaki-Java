@@ -9,21 +9,20 @@ import GUI.Dice;
 import GUI.PlayerNamesCapture;
 import java.util.ArrayList;
 
-public class NewGame {
+public class NewGame{
        
-       public static void main(String[] args){
+  public static void main(String[] args){
                       
-           Napakalaki game=Napakalaki.getInstance();
-           NapakalakiView napakalakiView = new NapakalakiView();
-           Dice.createInstance(napakalakiView);
+    Napakalaki game=Napakalaki.getInstance();
+    NapakalakiView napakalakiView = new NapakalakiView();
+    Dice.createInstance(napakalakiView);
                 
-           ArrayList<String> names = new ArrayList();
-           PlayerNamesCapture namesCapture = new PlayerNamesCapture(napakalakiView,true);
-           names=namesCapture.getNames();
-           game.initGame(names);
-           napakalakiView.setNapakalaki(game);
+    ArrayList<String> names = new ArrayList();
+    PlayerNamesCapture namesCapture = new PlayerNamesCapture(napakalakiView,true);
+    names=namesCapture.getNames();
+    game.initGame(names);
+    napakalakiView.setNapakalaki(game);
            
-           napakalakiView.setVisible(true);
-           
-       }
+    napakalakiView.setVisible(true);  
+    }
 }

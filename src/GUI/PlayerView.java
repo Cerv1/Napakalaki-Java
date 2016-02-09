@@ -95,8 +95,10 @@ public class PlayerView extends javax.swing.JPanel{
     jLabel6 = new javax.swing.JLabel();
 
     P_VisibleTreasures.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+    P_VisibleTreasures.setLayout(null);
 
     P_HiddenTreasures.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+    P_HiddenTreasures.setLayout(null);
 
     B_StealTreasure.setText("Steal Treasure");
     B_StealTreasure.setActionCommand("StealTreasure");

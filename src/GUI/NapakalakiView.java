@@ -19,7 +19,7 @@ public class NapakalakiView extends javax.swing.JFrame{
     
     public void setNapakalaki(Napakalaki NapakalakiModel){
       napakalakiModel=NapakalakiModel;
-      playerModel.setPlayer(napakalakiModel.getCurrentPlayer());
+      L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
       L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
       repaint();
       revalidate();
@@ -144,7 +144,6 @@ public class NapakalakiView extends javax.swing.JFrame{
   private void B_MTMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MTMActionPerformed
     L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
     L_MonsterView.setVisible(true);
-    this.setNapakalaki(napakalakiModel);
     monsterModel.repaint();
   }//GEN-LAST:event_B_MTMActionPerformed
 
