@@ -53,7 +53,7 @@
                   <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Component id="L_TreasureType" alignment="1" min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="288" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,6 +89,9 @@
           <Font name="Ubuntu" size="14" style="1"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_TreasureName"/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="L_TreasureBonus">
       <Properties>
@@ -96,6 +99,9 @@
           <Font name="Ubuntu" size="14" style="1"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_TreasureBonus"/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="L_TreasureType">
       <Properties>
@@ -103,6 +109,9 @@
           <Font name="Ubuntu" size="14" style="1"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_TreasureType"/>
+      </AccessibilityProperties>
     </Component>
   </SubComponents>
 </Form>

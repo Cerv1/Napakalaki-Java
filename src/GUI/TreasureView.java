@@ -15,6 +15,9 @@ public class TreasureView extends javax.swing.JPanel{
 
     public void setTreasure(Treasure T){
       treasureModel=T;
+      L_TreasureBonus.setText(String.valueOf(treasureModel.getBonus()));
+      L_TreasureName.setText(treasureModel.getName());
+      L_TreasureType.setText(String.valueOf(treasureModel.getType()));
       repaint();
       revalidate();
     }
@@ -93,8 +96,12 @@ public class TreasureView extends javax.swing.JPanel{
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
           .addComponent(L_TreasureType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(288, Short.MAX_VALUE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
+
+    L_TreasureName.getAccessibleContext().setAccessibleName("L_TreasureName");
+    L_TreasureBonus.getAccessibleContext().setAccessibleName("L_TreasureBonus");
+    L_TreasureType.getAccessibleContext().setAccessibleName("L_TreasureType");
   }// </editor-fold>//GEN-END:initComponents
 
   private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
