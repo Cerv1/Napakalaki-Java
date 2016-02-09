@@ -18,17 +18,6 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="B_StealTreasure" max="32767" attributes="0"/>
-                  <Component id="B_DiscardTreasure" min="-2" pref="150" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="B_MakeVisible" max="32767" attributes="0"/>
-                  <Component id="B_DiscardAllTreasures" min="-2" pref="151" max="-2" attributes="0"/>
-              </Group>
-          </Group>
           <Component id="jScrollPane3" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
           <Component id="jScrollPane4" alignment="0" min="-2" pref="290" max="-2" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
@@ -52,6 +41,18 @@
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="L_PlayerCombatLevel" min="-2" pref="32" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="B_StealTreasure" max="32767" attributes="0"/>
+                  <Component id="B_DiscardTreasure" min="-2" pref="150" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="B_DiscardAllTreasures" min="-2" pref="151" max="-2" attributes="0"/>
+                  <Component id="B_MakeVisible" alignment="0" min="-2" pref="151" max="-2" attributes="0"/>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -82,18 +83,18 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane4" pref="106" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane4" pref="102" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="B_StealTreasure" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="B_MakeVisible" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="B_DiscardTreasure" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
                   <Component id="B_DiscardAllTreasures" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -121,8 +122,14 @@
     </Component>
     <Component class="javax.swing.JButton" name="B_StealTreasure">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Oxygen-Sans Sans-Book" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Steal Treasure"/>
         <Property name="actionCommand" type="java.lang.String" value="StealTreasure"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor Por defecto"/>
+        </Property>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="B_StealTreasure"/>
@@ -133,6 +140,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="B_DiscardTreasure">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Oxygen-Sans Sans-Book" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Discard Treasure"/>
       </Properties>
       <AccessibilityProperties>
@@ -144,6 +154,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="B_MakeVisible">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Oxygen-Sans Sans-Book" size="11" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Make Visible"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="actionCommand" type="java.lang.String" value="MakeVisible"/>
@@ -157,6 +170,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="B_DiscardAllTreasures">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Oxygen-Sans Sans-Book" size="10" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Discard All Treasures"/>
       </Properties>
       <AccessibilityProperties>

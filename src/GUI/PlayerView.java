@@ -36,7 +36,7 @@ public class PlayerView extends javax.swing.JPanel{
       TreasureView tv;
       ArrayList<Treasure> output = new ArrayList();
       for(Component c:aPanel.getComponents()){
-        tv=(TreasureView) c;        // La vin vieo ke paranolla + wapa ase esto wajjja
+        tv=(TreasureView) c;
         if(tv.isSelected())
           output.add(tv.getTreasure());
       }
@@ -96,14 +96,17 @@ public class PlayerView extends javax.swing.JPanel{
     jScrollPane1 = new javax.swing.JScrollPane();
     P_HiddenTreasures = new javax.swing.JPanel();
 
+    B_StealTreasure.setFont(new java.awt.Font("Oxygen-Sans Sans-Book", 0, 11)); // NOI18N
     B_StealTreasure.setText("Steal Treasure");
     B_StealTreasure.setActionCommand("StealTreasure");
+    B_StealTreasure.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
     B_StealTreasure.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         B_StealTreasureActionPerformed(evt);
       }
     });
 
+    B_DiscardTreasure.setFont(new java.awt.Font("Oxygen-Sans Sans-Book", 0, 11)); // NOI18N
     B_DiscardTreasure.setText("Discard Treasure");
     B_DiscardTreasure.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +114,7 @@ public class PlayerView extends javax.swing.JPanel{
       }
     });
 
+    B_MakeVisible.setFont(new java.awt.Font("Oxygen-Sans Sans-Book", 0, 11)); // NOI18N
     B_MakeVisible.setText("Make Visible");
     B_MakeVisible.setToolTipText("");
     B_MakeVisible.setActionCommand("MakeVisible");
@@ -120,6 +124,7 @@ public class PlayerView extends javax.swing.JPanel{
       }
     });
 
+    B_DiscardAllTreasures.setFont(new java.awt.Font("Oxygen-Sans Sans-Book", 0, 10)); // NOI18N
     B_DiscardAllTreasures.setText("Discard All Treasures");
     B_DiscardAllTreasures.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,14 +168,6 @@ public class PlayerView extends javax.swing.JPanel{
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addComponent(jLabel5)
       .addComponent(jLabel6)
-      .addGroup(layout.createSequentialGroup()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(B_StealTreasure, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(B_DiscardTreasure, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(28, 28, 28)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(B_MakeVisible, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(B_DiscardAllTreasures, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
       .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
       .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
       .addGroup(layout.createSequentialGroup()
@@ -191,6 +188,15 @@ public class PlayerView extends javax.swing.JPanel{
         .addComponent(jLabel3)
         .addGap(18, 18, 18)
         .addComponent(L_PlayerCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(B_StealTreasure, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(B_DiscardTreasure, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(18, 18, 18)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(B_DiscardAllTreasures, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(B_MakeVisible, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,16 +221,16 @@ public class PlayerView extends javax.swing.JPanel{
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(jLabel6)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
+        .addGap(18, 18, 18)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(B_StealTreasure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(B_MakeVisible, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(27, 27, 27)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(B_DiscardTreasure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(B_DiscardAllTreasures, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap())
+        .addGap(15, 15, 15))
     );
 
     L_PlayerName.getAccessibleContext().setAccessibleName("L_PlayerCombatLevel");
@@ -252,7 +258,10 @@ public class PlayerView extends javax.swing.JPanel{
     }//GEN-LAST:event_B_DiscardTreasureActionPerformed
 
     private void B_DiscardAllTreasuresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_DiscardAllTreasuresActionPerformed
-
+      playerModel.discardAllTreasures();
+      setPlayer(playerModel);
+      repaint();
+      revalidate();
     }//GEN-LAST:event_B_DiscardAllTreasuresActionPerformed
 
 
