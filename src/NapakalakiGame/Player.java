@@ -22,7 +22,7 @@ public class Player {
         name=nombre;
         level=1;
         dead=true;
-        canISteal=false;
+        canISteal=true;
         hiddenTreasures= new ArrayList();
         visibleTreasures = new ArrayList();
     }
@@ -31,7 +31,7 @@ public class Player {
         this.name=p.name;
         this.level=p.level;
         this.dead=p.dead;
-        this.canISteal=p.canISteal;
+        this.canISteal=true;
         this.hiddenTreasures=p.hiddenTreasures;
         this.visibleTreasures=p.visibleTreasures;
     }

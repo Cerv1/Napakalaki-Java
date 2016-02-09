@@ -244,7 +244,13 @@ public class PlayerView extends javax.swing.JPanel{
   }// </editor-fold>//GEN-END:initComponents
 
     private void B_StealTreasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_StealTreasureActionPerformed
-        // TODO add your handling code here:
+      if(playerModel.canISteal()){
+        Treasure t = playerModel.stealTreasure();
+        TreasureView tv = new TreasureView();
+        tv.setTreasure(t);
+        P_HiddenTreasures.add(tv);
+        setPlayer(napakalakiModel.getCurrentPlayer());
+      }
     }//GEN-LAST:event_B_StealTreasureActionPerformed
 
     private void B_MakeVisibleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MakeVisibleActionPerformed
