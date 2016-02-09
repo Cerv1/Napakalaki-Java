@@ -7,10 +7,7 @@ package GUI;
 
 import NapakalakiGame.CombatResult;
 
-/**
- *
- * @author cervi
- */
+
 public class CombatView extends javax.swing.JPanel {
     
     public CombatView() {

@@ -15,13 +15,13 @@ public class NapakalakiView extends javax.swing.JFrame{
     
     public NapakalakiView(){
       initComponents();
-      L_MonsterVIew.setVisible(false);
+      L_MonsterView.setVisible(false);
     }
     
     public void setNapakalaki(Napakalaki NapakalakiModel){
       napakalakiModel=NapakalakiModel;
       L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
-      L_MonsterVIew.setMonster(napakalakiModel.getCurrentMonster());
+      L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
       B_Combat.setVisible(false);
       B_NextTurn.setVisible(false);
       B_MTM.setVisible(true);
@@ -41,7 +41,7 @@ public class NapakalakiView extends javax.swing.JFrame{
     B_MTM = new javax.swing.JButton();
     B_Combat = new javax.swing.JButton();
     B_Exit = new javax.swing.JButton();
-    L_MonsterVIew = new GUI.MonsterView();
+    L_MonsterView = new GUI.MonsterView();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,47 +86,41 @@ public class NapakalakiView extends javax.swing.JFrame{
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addContainerGap()
-        .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(B_MTM))
-            .addGap(50, 50, 50)
-            .addComponent(L_MonsterVIew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addContainerGap())
-          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addContainerGap()
+            .addComponent(B_MTM)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+            .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+            .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addContainerGap())
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addGroup(layout.createSequentialGroup()
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-              .addGroup(layout.createSequentialGroup()
-                .addComponent(L_MonsterVIew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
-              .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(B_MTM, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-            .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(0, 17, Short.MAX_VALUE)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(0, 0, Short.MAX_VALUE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addComponent(B_MTM, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(B_Exit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap())
     );
 
     L_PlayerView.getAccessibleContext().setAccessibleName("L_PlayerView");
-    L_MonsterVIew.getAccessibleContext().setAccessibleName("L_MonsterVIew");
+    L_MonsterView.getAccessibleContext().setAccessibleName("L_MonsterView");
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
@@ -136,8 +130,8 @@ public class NapakalakiView extends javax.swing.JFrame{
     }//GEN-LAST:event_B_ExitActionPerformed
 
   private void B_MTMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MTMActionPerformed
-    L_MonsterVIew.setMonster(napakalakiModel.getCurrentMonster());
-    L_MonsterVIew.setVisible(true);
+    L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
+    L_MonsterView.setVisible(true);
     B_MTM.setVisible(false);
     B_NextTurn.setVisible(false);
     B_Combat.setVisible(true);
@@ -153,7 +147,7 @@ public class NapakalakiView extends javax.swing.JFrame{
   }//GEN-LAST:event_B_CombatActionPerformed
 
   private void B_NextTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_NextTurnActionPerformed
-    L_MonsterVIew.setVisible(false);
+    L_MonsterView.setVisible(false);
     napakalakiModel.nextTurn();
     L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
     L_PlayerView.repaint();
@@ -168,7 +162,7 @@ public class NapakalakiView extends javax.swing.JFrame{
   private javax.swing.JButton B_Exit;
   private javax.swing.JButton B_MTM;
   private javax.swing.JButton B_NextTurn;
-  private GUI.MonsterView L_MonsterVIew;
+  private GUI.MonsterView L_MonsterView;
   private GUI.PlayerView L_PlayerView;
   // End of variables declaration//GEN-END:variables
 }

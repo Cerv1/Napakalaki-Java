@@ -16,19 +16,16 @@ public class MonsterView extends javax.swing.JPanel{
   
   public void setMonster(Monster m){
     monsterModel=m;
-    
-    // Dejamos comentados los que serian los labels con los atributos del monstruo
-    // para mostrar sus atributos en la imagen.
-    //
-    //L_MonsterName.setText(monsterModel.getName());
-    //L_MonsterCombatLevel.setText(String.valueOf(monsterModel.getCombatLevel()));
-    //L_MonsterBadConsequence.setBadConsequence(monsterModel.getBadConsequence());
-    //L_MonsterPrize.setPrize(monsterModel.getPrize());
+
+    L_MonsterName.setText(monsterModel.getName());
+    L_MonsterCombatLevel.setText(String.valueOf(monsterModel.getCombatLevel()));
+    L_MonsterBadConsequence.setBadConsequence(monsterModel.getBadConsequence());
+    L_MonsterPrize.setPrize(monsterModel.getPrize());
     
     ImageIcon image = new ImageIcon("monsters/"+monsterModel.getName()+".jpg");
     L_MonsterIcon.setIcon(image);
-
     L_MonsterIcon.repaint();
+    
     repaint();
     revalidate();
   }
@@ -43,23 +40,96 @@ public class MonsterView extends javax.swing.JPanel{
   private void initComponents() {
 
     L_MonsterIcon = new javax.swing.JLabel();
+    jLabel1 = new javax.swing.JLabel();
+    jLabel2 = new javax.swing.JLabel();
+    L_MonsterBadConsequence = new GUI.BadConsequenceView();
+    L_MonsterName = new javax.swing.JLabel();
+    jLabel3 = new javax.swing.JLabel();
+    L_MonsterPrize = new GUI.PrizeView();
+    jLabel4 = new javax.swing.JLabel();
+    L_MonsterCombatLevel = new javax.swing.JLabel();
+
+    jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+    jLabel1.setText("Name");
+
+    jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+    jLabel2.setText("BadConsequence");
+
+    jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+    jLabel3.setText("Prize");
+
+    jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+    jLabel4.setText("CombatLevel");
+
+    L_MonsterCombatLevel.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(L_MonsterIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jLabel3)
+          .addGroup(layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(L_MonsterPrize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(L_MonsterIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(layout.createSequentialGroup()
+        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(L_MonsterName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        .addComponent(jLabel4)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(layout.createSequentialGroup()
+        .addComponent(jLabel2)
+        .addGap(0, 0, Short.MAX_VALUE))
+      .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(L_MonsterBadConsequence, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
-        .addComponent(L_MonsterIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(0, 0, Short.MAX_VALUE))
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(L_MonsterName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addComponent(jLabel4)
+            .addComponent(L_MonsterCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jLabel2)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(L_MonsterBadConsequence, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(L_MonsterIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addGroup(layout.createSequentialGroup()
+            .addComponent(jLabel3)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(L_MonsterPrize, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addContainerGap())
     );
+
+    L_MonsterBadConsequence.getAccessibleContext().setAccessibleName("L_MonsterBadConsequence");
+    L_MonsterName.getAccessibleContext().setAccessibleName("L_MonsterName");
+    L_MonsterPrize.getAccessibleContext().setAccessibleName("L_MonsterPrize");
+    L_MonsterCombatLevel.getAccessibleContext().setAccessibleName("L_MonsterCombatLevel");
   }// </editor-fold>//GEN-END:initComponents
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private GUI.BadConsequenceView L_MonsterBadConsequence;
+  private javax.swing.JLabel L_MonsterCombatLevel;
   private javax.swing.JLabel L_MonsterIcon;
+  private javax.swing.JLabel L_MonsterName;
+  private GUI.PrizeView L_MonsterPrize;
+  private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel2;
+  private javax.swing.JLabel jLabel3;
+  private javax.swing.JLabel jLabel4;
   // End of variables declaration//GEN-END:variables
 }
