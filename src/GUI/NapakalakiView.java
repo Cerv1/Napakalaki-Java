@@ -21,6 +21,9 @@ public class NapakalakiView extends javax.swing.JFrame{
       napakalakiModel=NapakalakiModel;
       L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
       L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
+      B_Combat.setVisible(false);
+      B_NextTurn.setVisible(false);
+      B_MTM.setVisible(true);
       repaint();
       revalidate();
     }
@@ -46,6 +49,11 @@ public class NapakalakiView extends javax.swing.JFrame{
     B_NextTurn.setFont(new java.awt.Font("Ubuntu", 1, 17)); // NOI18N
     B_NextTurn.setForeground(new java.awt.Color(54, 69, 254));
     B_NextTurn.setText("Next Turn");
+    B_NextTurn.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        B_NextTurnActionPerformed(evt);
+      }
+    });
 
     B_MTM.setFont(new java.awt.Font("Ubuntu", 1, 17)); // NOI18N
     B_MTM.setForeground(new java.awt.Color(54, 69, 254));
@@ -84,26 +92,26 @@ public class NapakalakiView extends javax.swing.JFrame{
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(jLabel1)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(B_Exit))
           .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
               .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                .addGap(168, 168, 168)
-                .addComponent(B_MTM)
-                .addGap(54, 54, 54)
-                .addComponent(B_Combat)
-                .addGap(54, 54, 54)
-                .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(85, 85, 85)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(B_MTM, javax.swing.GroupLayout.Alignment.TRAILING)
+                  .addComponent(B_NextTurn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(B_Combat))
               .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGap(0, 75, Short.MAX_VALUE)))
+            .addGap(0, 89, Short.MAX_VALUE))
+          .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jLabel1)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(B_Exit)))
         .addContainerGap())
       .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(layout.createSequentialGroup()
@@ -118,12 +126,15 @@ public class NapakalakiView extends javax.swing.JFrame{
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
           .addComponent(L_PlayerView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
           .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-        .addGap(51, 51, 51)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(B_MTM)
-          .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(B_NextTurn))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+        .addGap(29, 29, 29)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+          .addGroup(layout.createSequentialGroup()
+            .addGap(2, 2, 2)
+            .addComponent(B_MTM)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(B_NextTurn))
+          .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
             .addComponent(B_Exit)
@@ -143,7 +154,7 @@ public class NapakalakiView extends javax.swing.JFrame{
   }// </editor-fold>//GEN-END:initComponents
 
     private void B_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_ExitActionPerformed
-        System.exit(0);
+      System.exit(0);
     }//GEN-LAST:event_B_ExitActionPerformed
 
   private void B_MTMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MTMActionPerformed
@@ -151,6 +162,7 @@ public class NapakalakiView extends javax.swing.JFrame{
     L_MonsterView.setVisible(true);
     B_MTM.setVisible(false);
     B_NextTurn.setVisible(false);
+    B_Combat.setVisible(true);
     monsterModel.repaint();
   }//GEN-LAST:event_B_MTMActionPerformed
 
@@ -160,6 +172,10 @@ public class NapakalakiView extends javax.swing.JFrame{
     B_Combat.setVisible(false);
     B_NextTurn.setVisible(true);
   }//GEN-LAST:event_B_CombatActionPerformed
+
+  private void B_NextTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_NextTurnActionPerformed
+    napakalakiModel.nextTurn();
+  }//GEN-LAST:event_B_NextTurnActionPerformed
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
