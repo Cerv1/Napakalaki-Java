@@ -175,6 +175,11 @@ public class NapakalakiView extends javax.swing.JFrame{
 
   private void B_NextTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_NextTurnActionPerformed
     napakalakiModel.nextTurn();
+    L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
+    L_PlayerView.repaint();
+    B_NextTurn.setVisible(false);
+    B_MTM.setVisible(true);
+    repaint();
   }//GEN-LAST:event_B_NextTurnActionPerformed
 
 
