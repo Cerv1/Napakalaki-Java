@@ -195,7 +195,7 @@
     <Component class="javax.swing.JLabel" name="L_TitleImage">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/GUI/dice_title_screen.png"/>
+          <Image iconType="3" name="/images/dice_title_screen.png"/>
         </Property>
       </Properties>
     </Component>
