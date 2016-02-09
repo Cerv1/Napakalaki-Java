@@ -132,24 +132,27 @@ public class NapakalakiView extends javax.swing.JFrame{
   private void B_MTMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MTMActionPerformed
     L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
     L_MonsterView.setVisible(true);
+    L_PlayerView.B_MakeVisible.setEnabled(false);
+    L_PlayerView.B_StealTreasure.setEnabled(false);
     B_MTM.setVisible(false);
     B_NextTurn.setVisible(false);
     B_Combat.setVisible(true);
-    monsterModel.repaint();
+    repaint();
   }//GEN-LAST:event_B_MTMActionPerformed
 
   private void B_CombatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CombatActionPerformed
-    CombatResult cr = napakalakiModel.getCurrentPlayer().combat(napakalakiModel.getCurrentMonster());
-      
+    CombatResult cr = napakalakiModel.getCurrentPlayer().combat(napakalakiModel.getCurrentMonster());     
     B_MTM.setVisible(false);
     B_Combat.setVisible(false);
     B_NextTurn.setVisible(true);
+    L_PlayerView.B_StealTreasure.setEnabled(true);
   }//GEN-LAST:event_B_CombatActionPerformed
 
   private void B_NextTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_NextTurnActionPerformed
     L_MonsterView.setVisible(false);
     napakalakiModel.nextTurn();
-    
+    L_PlayerView.B_MakeVisible.setEnabled(true);
+    L_PlayerView.B_StealTreasure.setEnabled(false);
     L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
     L_PlayerView.repaint();
     B_NextTurn.setVisible(false);

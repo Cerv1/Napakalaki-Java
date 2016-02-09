@@ -22,6 +22,7 @@ public class PlayerView extends javax.swing.JPanel{
     
     public PlayerView(){
       initComponents();
+      B_StealTreasure.setEnabled(false);
     }
     
     public void setNapakalakiModel(Napakalaki n){
@@ -65,6 +66,12 @@ public class PlayerView extends javax.swing.JPanel{
         L_PendingModel.setPendingBadConsequence(playerModel.getPendingBadConsequence());
       this.fillTreasurePanel(P_VisibleTreasures, playerModel.getVisibleTreasures());
       this.fillTreasurePanel(P_HiddenTreasures, playerModel.getHiddenTreasures());
+      repaint();
+      revalidate();
+    }
+    
+    public void disableButton(){
+      B_MakeVisible.setVisible(false);
       repaint();
       revalidate();
     }
@@ -287,10 +294,10 @@ public class PlayerView extends javax.swing.JPanel{
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private javax.swing.JButton B_DiscardAllTreasures;
-  private javax.swing.JButton B_DiscardTreasure;
-  private javax.swing.JButton B_MakeVisible;
-  private javax.swing.JButton B_StealTreasure;
+  protected javax.swing.JButton B_DiscardAllTreasures;
+  protected javax.swing.JButton B_DiscardTreasure;
+  protected javax.swing.JButton B_MakeVisible;
+  protected javax.swing.JButton B_StealTreasure;
   private GUI.PendingBadConsequenceView L_PendingModel;
   private javax.swing.JLabel L_PlayerCombatLevel;
   private javax.swing.JLabel L_PlayerEnemy;
