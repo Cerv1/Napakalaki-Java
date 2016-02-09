@@ -141,6 +141,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Combat!"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_CombatActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="B_Exit">
       <Properties>

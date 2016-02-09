@@ -59,6 +59,11 @@ public class NapakalakiView extends javax.swing.JFrame{
     B_Combat.setFont(new java.awt.Font("Ubuntu", 1, 20)); // NOI18N
     B_Combat.setForeground(new java.awt.Color(54, 69, 254));
     B_Combat.setText("Combat!");
+    B_Combat.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        B_CombatActionPerformed(evt);
+      }
+    });
 
     B_Exit.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
     B_Exit.setText("Exit :(");
@@ -144,8 +149,17 @@ public class NapakalakiView extends javax.swing.JFrame{
   private void B_MTMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_MTMActionPerformed
     L_MonsterView.setMonster(napakalakiModel.getCurrentMonster());
     L_MonsterView.setVisible(true);
+    B_MTM.setVisible(false);
+    B_NextTurn.setVisible(false);
     monsterModel.repaint();
   }//GEN-LAST:event_B_MTMActionPerformed
+
+  private void B_CombatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CombatActionPerformed
+    //COMBATIR
+    B_MTM.setVisible(false);
+    B_Combat.setVisible(false);
+    B_NextTurn.setVisible(true);
+  }//GEN-LAST:event_B_CombatActionPerformed
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables

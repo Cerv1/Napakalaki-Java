@@ -21,8 +21,8 @@ public class NewGame{
     PlayerNamesCapture namesCapture = new PlayerNamesCapture(napakalakiView,true);
     names=namesCapture.getNames();
     game.initGame(names);
-    napakalakiView.setNapakalaki(game);
-           
-    napakalakiView.setVisible(true);  
-    }
+    napakalakiView.setNapakalaki(game);           
+    napakalakiView.setVisible(true);
+  }
+
 }
