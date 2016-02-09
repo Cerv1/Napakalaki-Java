@@ -50,7 +50,7 @@ public class PlayerNamesCapture extends javax.swing.JDialog{
     L_Title = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-    setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+    setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
     L_Player2.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
     L_Player2.setText("Player 2: ");
@@ -152,6 +152,7 @@ public class PlayerNamesCapture extends javax.swing.JDialog{
     B_Cancel.getAccessibleContext().setAccessibleName("B_Cancel");
 
     pack();
+    setLocationRelativeTo(null);
   }// </editor-fold>//GEN-END:initComponents
 
     private void B_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PlayActionPerformed

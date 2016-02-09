@@ -20,13 +20,10 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="L_LOSE" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="L_WIN" min="-2" max="-2" attributes="0"/>
-                  <Component id="L_WINGAME" alignment="0" min="-2" pref="287" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="L_WINGAME1" min="-2" pref="287" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="L_LOSEANDCONVERT" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="L_WINGAME" min="-2" pref="287" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -37,10 +34,9 @@
               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
               <Component id="L_WIN" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="L_WINGAME" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="L_WINGAME1" min="-2" pref="32" max="-2" attributes="0"/>
+              <Component id="L_LOSEANDCONVERT" min="-2" pref="32" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
+              <Component id="L_WINGAME" min="-2" pref="32" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -56,8 +52,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xa1;Has perdido el combate!"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_LOSE"/>
+      </AccessibilityProperties>
     </Component>
-    <Component class="javax.swing.JLabel" name="L_WINGAME">
+    <Component class="javax.swing.JLabel" name="L_LOSEANDCONVERT">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comfortaa" size="25" style="1"/>
@@ -65,8 +64,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="10" green="10" red="cf" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&#xa1;Te conviertes en secatior!"/>
+        <Property name="text" type="java.lang.String" value="&#xa1;Te conviertes en sectario!"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_LOSEANDCONVERT"/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="L_WIN">
       <Properties>
@@ -78,8 +80,11 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xa1;Has ganado el combate!"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_WIN"/>
+      </AccessibilityProperties>
     </Component>
-    <Component class="javax.swing.JLabel" name="L_WINGAME1">
+    <Component class="javax.swing.JLabel" name="L_WINGAME">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Comfortaa" size="25" style="1"/>
@@ -89,6 +94,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="&#xa1;Has ganado la partida!"/>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_WINGAME"/>
+      </AccessibilityProperties>
     </Component>
   </SubComponents>
 </Form>

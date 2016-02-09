@@ -6,6 +6,7 @@ import NapakalakiGame.Napakalaki;
 public class NapakalakiView extends javax.swing.JFrame{
     
     Napakalaki napakalakiModel;
+    CombatView combatModel= new CombatView();
     MonsterView monsterModel = new MonsterView();
     PlayerView playerModel = new PlayerView();
     
@@ -38,6 +39,7 @@ public class NapakalakiView extends javax.swing.JFrame{
     B_Exit = new javax.swing.JButton();
     L_MonsterView = new GUI.MonsterView();
     L_PlayerView = new GUI.PlayerView();
+    L_CombatView = new GUI.CombatView();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,16 +86,23 @@ public class NapakalakiView extends javax.swing.JFrame{
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
         .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(layout.createSequentialGroup()
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addGroup(layout.createSequentialGroup()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(B_MTM)
-              .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(32, 32, 32)
-            .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+              .addGroup(layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(B_MTM)
+                  .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+              .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(L_CombatView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+            .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addContainerGap())
     );
     layout.setVerticalGroup(
@@ -104,12 +113,14 @@ public class NapakalakiView extends javax.swing.JFrame{
             .addContainerGap()
             .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addGroup(layout.createSequentialGroup()
-            .addGap(63, 63, 63)
+            .addGap(31, 31, 31)
             .addComponent(B_MTM, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(59, 59, 59)
+            .addComponent(L_CombatView, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap())
@@ -121,8 +132,10 @@ public class NapakalakiView extends javax.swing.JFrame{
 
     L_MonsterView.getAccessibleContext().setAccessibleName("L_MonsterView");
     L_PlayerView.getAccessibleContext().setAccessibleName("L_PlayerView");
+    L_CombatView.getAccessibleContext().setAccessibleName("L_CombatView");
 
     pack();
+    setLocationRelativeTo(null);
   }// </editor-fold>//GEN-END:initComponents
 
     private void B_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_ExitActionPerformed
@@ -141,7 +154,9 @@ public class NapakalakiView extends javax.swing.JFrame{
   }//GEN-LAST:event_B_MTMActionPerformed
 
   private void B_CombatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CombatActionPerformed
-    CombatResult cr = napakalakiModel.getCurrentPlayer().combat(napakalakiModel.getCurrentMonster());     
+    CombatResult cr = napakalakiModel.getCurrentPlayer().combat(napakalakiModel.getCurrentMonster());   
+    L_CombatView.setCombatView(cr);
+    L_CombatView.repaint();
     B_MTM.setVisible(false);
     B_Combat.setVisible(false);
     B_NextTurn.setVisible(true);
@@ -166,6 +181,7 @@ public class NapakalakiView extends javax.swing.JFrame{
   private javax.swing.JButton B_Exit;
   private javax.swing.JButton B_MTM;
   private javax.swing.JButton B_NextTurn;
+  private GUI.CombatView L_CombatView;
   private GUI.MonsterView L_MonsterView;
   private GUI.PlayerView L_PlayerView;
   // End of variables declaration//GEN-END:variables
