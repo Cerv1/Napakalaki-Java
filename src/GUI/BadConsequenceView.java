@@ -16,8 +16,9 @@ public class BadConsequenceView extends javax.swing.JPanel{
   }
     
   public void setBadConsequence(BadConsequence bc){
-   // badConsequenceModel=bc;
+    badConsequenceModel=bc;
     repaint();
+    revalidate();
   }
 
   /**

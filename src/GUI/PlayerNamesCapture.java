@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import NapakalakiGame.Napakalaki;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
@@ -14,6 +15,8 @@ import javax.swing.JFrame;
 public class PlayerNamesCapture extends javax.swing.JDialog{
 
     ArrayList<String> names = new ArrayList();
+    Napakalaki napakalaki = Napakalaki.getInstance();
+    NapakalakiView napakalakiModel = new NapakalakiView();
     
     /**
      * Creates new form PlayerNamesCapture
@@ -159,15 +162,15 @@ public class PlayerNamesCapture extends javax.swing.JDialog{
     }// </editor-fold>//GEN-END:initComponents
 
     private void B_PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_PlayActionPerformed
-        names.add(name1.getText());
-        names.add(name2.getText());
-        names.add(name3.getText());
-        this.dispose();
+      names.add(name1.getText());
+      names.add(name2.getText());
+      names.add(name3.getText());
+      this.dispose();
     }//GEN-LAST:event_B_PlayActionPerformed
 
 // Cancel
     private void B_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CancelActionPerformed
-        System.exit(0);
+      System.exit(0);
     }//GEN-LAST:event_B_CancelActionPerformed
 
     public ArrayList<String> getNames(){

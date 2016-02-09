@@ -1,15 +1,14 @@
 
 package GUI;
 
+import NapakalakiGame.Napakalaki;
+import NapakalakiGame.Player;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 import javax.swing.Timer;
 
-/**
- *
- * @author 
- */
+
 public class Dice extends javax.swing.JDialog{
   
   private static Dice instance = null;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -32,7 +32,7 @@
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="B_StealTreasure" max="32767" attributes="0"/>
@@ -47,7 +47,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="L_PlayerEnemy" min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="L_PlayerEnemy" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="P_VisibleTreasures" alignment="0" min="-2" pref="111" max="-2" attributes="0"/>
@@ -99,9 +99,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="L_PlayerName">
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_PlayerName"/>
-      </AccessibilityProperties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="L_PlayerName.getAccessibleContext().setAccessibleName(&quot;L_PlayerCombatLevel&quot;);"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="L_PlayerCombatLevel">
       <AccessibilityProperties>

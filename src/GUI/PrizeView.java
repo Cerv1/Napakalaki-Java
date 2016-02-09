@@ -17,7 +17,10 @@ public class PrizeView extends javax.swing.JPanel {
   
   public void setPrize(Prize p){
     prizeModel=p;
+    L_PrizeLevel.setText(String.valueOf(prizeModel.getLevel()));
+    L_PrizeTreasures.setText(String.valueOf(prizeModel.getTreasures()));
     repaint();
+    revalidate();
   }
 
   /**

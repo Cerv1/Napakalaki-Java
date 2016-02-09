@@ -35,7 +35,7 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="badConsequenceView1" min="-2" max="-2" attributes="0"/>
+                  <Component id="L_BadConsequenceView" min="-2" max="-2" attributes="0"/>
                   <Component id="prizeView1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -58,7 +58,7 @@
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" pref="26" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="badConsequenceView1" min="-2" max="-2" attributes="0"/>
+              <Component id="L_BadConsequenceView" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -69,6 +69,9 @@
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_MonsterName"/>
       </AccessibilityProperties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="MonsterView_L_MonsterName"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="L_MonsterCombatLevel">
       <AccessibilityProperties>
@@ -105,7 +108,10 @@
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
     </Component>
-    <Component class="GUI.BadConsequenceView" name="badConsequenceView1">
+    <Component class="GUI.BadConsequenceView" name="L_BadConsequenceView">
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_BadConsequenceView"/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>

@@ -36,7 +36,7 @@ public class Player {
         this.visibleTreasures=p.visibleTreasures;
     }
     
-    protected Player getEnemy(){
+    public Player getEnemy(){
         return enemy;
     }
     
@@ -56,7 +56,7 @@ public class Player {
         dead = false;
     }
     
-    protected int getCombatLevel(){
+    public int getCombatLevel(){
         int nivel_total=level;
            
         for(Treasure visibleTreasure : visibleTreasures) {

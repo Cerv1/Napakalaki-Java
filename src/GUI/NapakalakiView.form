@@ -43,9 +43,9 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="playerView1" min="-2" max="-2" attributes="0"/>
+                              <Component id="L_PlayerView" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="monsterView1" min="-2" pref="424" max="-2" attributes="0"/>
+                              <Component id="L_MonsterView" min="-2" pref="424" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
@@ -67,8 +67,8 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="playerView1" max="32767" attributes="0"/>
-                  <Component id="monsterView1" pref="0" max="32767" attributes="0"/>
+                  <Component id="L_PlayerView" max="32767" attributes="0"/>
+                  <Component id="L_MonsterView" pref="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -96,9 +96,15 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="GUI.MonsterView" name="monsterView1">
+    <Component class="GUI.MonsterView" name="L_MonsterView">
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_MonsterView"/>
+      </AccessibilityProperties>
     </Component>
-    <Component class="GUI.PlayerView" name="playerView1">
+    <Component class="GUI.PlayerView" name="L_PlayerView">
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="L_PlayerView"/>
+      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JButton" name="B_NextTurn">
       <Properties>
@@ -121,6 +127,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Meet the monster!"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_MTMActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="B_Combat">
       <Properties>
