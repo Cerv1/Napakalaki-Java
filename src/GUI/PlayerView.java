@@ -63,6 +63,7 @@ public class PlayerView extends javax.swing.JPanel{
       L_PlayerEnemy.setText(String.valueOf(playerModel.getEnemy().getName()));
       this.fillTreasurePanel(P_VisibleTreasures, playerModel.getVisibleTreasures());
       this.fillTreasurePanel(P_HiddenTreasures, playerModel.getHiddenTreasures());
+      //P_HiddenTreasures.getAccessibleContext();
       BadConsequence bc=playerModel.getPendingBadConsequence();
       badConsequenceModel.setBadConsequence(bc);
 
