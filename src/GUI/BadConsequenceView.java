@@ -31,13 +31,16 @@ public class BadConsequenceView extends javax.swing.JPanel{
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    L_BadConsequenceText = new javax.swing.JLabel();
     jLabel1 = new javax.swing.JLabel();
-
-    L_BadConsequenceText.setFont(new java.awt.Font("Ubuntu", 0, 13)); // NOI18N
+    jScrollPane1 = new javax.swing.JScrollPane();
+    L_BadConsequenceText = new javax.swing.JLabel();
 
     jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
     jLabel1.setText("Description");
+
+    L_BadConsequenceText.setFont(new java.awt.Font("Ubuntu", 0, 13)); // NOI18N
+    jScrollPane1.setViewportView(L_BadConsequenceText);
+    L_BadConsequenceText.getAccessibleContext().setAccessibleName("L_BadConsequenceText");
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
@@ -46,21 +49,21 @@ public class BadConsequenceView extends javax.swing.JPanel{
       .addGroup(layout.createSequentialGroup()
         .addComponent(jLabel1)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(L_BadConsequenceText, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-      .addComponent(L_BadConsequenceText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addGroup(layout.createSequentialGroup()
+        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(32, Short.MAX_VALUE))
+      .addComponent(jScrollPane1)
     );
-
-    L_BadConsequenceText.getAccessibleContext().setAccessibleName("L_BadConsequenceText");
   }// </editor-fold>//GEN-END:initComponents
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JLabel L_BadConsequenceText;
   private javax.swing.JLabel jLabel1;
+  private javax.swing.JScrollPane jScrollPane1;
   // End of variables declaration//GEN-END:variables
 }
