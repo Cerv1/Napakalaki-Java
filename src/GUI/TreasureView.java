@@ -101,14 +101,16 @@ public class TreasureView extends javax.swing.JPanel{
   }// </editor-fold>//GEN-END:initComponents
 
   private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
-    if(selected)
+    if(selected){
       selected=false;
-    else
+      this.setBackground(Color.cyan);
+    }
+    else{
       selected=true;
-    
       this.setBackground(Color.red);
-      this.setOpaque(selected);
-      repaint();
+    }
+    this.setOpaque(selected);
+    repaint();
   }//GEN-LAST:event_formMouseClicked
 
 
