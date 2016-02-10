@@ -67,6 +67,7 @@ public class PlayerView extends javax.swing.JPanel{
       this.fillTreasurePanel(P_HiddenTreasures, playerModel.getHiddenTreasures());
       P_HiddenTreasures.repaint();
       P_VisibleTreasures.repaint();
+      L_PendingModel.repaint();
       repaint();
       revalidate();
     }

@@ -21,9 +21,8 @@ public class MonsterView extends javax.swing.JPanel{
     L_MonsterCombatLevel.setText(String.valueOf(monsterModel.getCombatLevel()));
     L_MonsterBadConsequence.setBadConsequence(monsterModel.getBadConsequence());
     L_MonsterPrize.setPrize(monsterModel.getPrize());
-    
-    ImageIcon image = new ImageIcon("monsters/"+monsterModel.getName()+".jpg");
-    L_MonsterIcon.setIcon(image);
+
+    L_MonsterIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/monsters/"+m.getName()+".jpg")));
     L_MonsterIcon.repaint();
     
     repaint();
