@@ -294,7 +294,7 @@ public class PlayerView extends javax.swing.JPanel{
   protected javax.swing.JButton B_DiscardTreasure;
   protected javax.swing.JButton B_MakeVisible;
   protected javax.swing.JButton B_StealTreasure;
-  private GUI.PendingBadConsequenceView L_PendingModel;
+  public GUI.PendingBadConsequenceView L_PendingModel;
   private javax.swing.JLabel L_PlayerCombatLevel;
   private javax.swing.JLabel L_PlayerEnemy;
   private javax.swing.JLabel L_PlayerLevel;

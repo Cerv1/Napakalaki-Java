@@ -176,11 +176,11 @@ public class NapakalakiView extends javax.swing.JFrame{
   private void B_NextTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_NextTurnActionPerformed
     L_MonsterView.setVisible(false);
     L_CombatResultView.setVisible(false);
+    L_PlayerView.L_PendingModel.repaint();
     if(napakalakiModel.nextTurn()){
       L_PlayerView.B_MakeVisible.setEnabled(true);
       L_PlayerView.B_StealTreasure.setEnabled(false);
       L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
-      L_PlayerView.repaint();
       B_NextTurn.setEnabled(false);
       B_MTM.setEnabled(true);
     }
