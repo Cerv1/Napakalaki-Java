@@ -282,14 +282,13 @@ public class CardDealer {
     
     public Monster nextMonster(){       
         if(unusedMonsters.isEmpty()){
-            ArrayList<Monster> aux=unusedMonsters;
             unusedMonsters=usedMonsters;
-            usedMonsters=aux;
+            usedMonsters.clear();
             shuffleMonsters();
-         }
+        }
              
         Monster aux = unusedMonsters.get(0);
-        unusedMonsters.remove(aux);
+        unusedMonsters.remove(0);
         return aux;
     }
     
