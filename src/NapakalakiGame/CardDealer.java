@@ -269,9 +269,8 @@ public class CardDealer {
   
     public Treasure nextTreasure(){       
         if(unusedTreasures.isEmpty()){
-            ArrayList<Treasure> aux = unusedTreasures;
             unusedTreasures=usedTreasures;        
-            usedTreasures=aux;
+            usedTreasures.clear();
             shuffleTreasures();
         }
         

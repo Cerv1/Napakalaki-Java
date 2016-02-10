@@ -7,7 +7,6 @@ package GUI;
 
 import NapakalakiGame.Player;
 import NapakalakiGame.Treasure;
-import NapakalakiGame.BadConsequence;
 import NapakalakiGame.Napakalaki;
 import java.awt.Component;
 import java.util.ArrayList;
@@ -66,12 +65,8 @@ public class PlayerView extends javax.swing.JPanel{
         L_PendingModel.setPendingBadConsequence(playerModel.getPendingBadConsequence());
       this.fillTreasurePanel(P_VisibleTreasures, playerModel.getVisibleTreasures());
       this.fillTreasurePanel(P_HiddenTreasures, playerModel.getHiddenTreasures());
-      repaint();
-      revalidate();
-    }
-    
-    public void disableButton(){
-      B_MakeVisible.setVisible(false);
+      P_HiddenTreasures.repaint();
+      P_VisibleTreasures.repaint();
       repaint();
       revalidate();
     }
