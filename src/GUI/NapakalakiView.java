@@ -40,6 +40,7 @@ public class NapakalakiView extends javax.swing.JFrame{
     L_MonsterView = new GUI.MonsterView();
     L_PlayerView = new GUI.PlayerView();
     L_CombatView = new GUI.CombatView();
+    L_CombatResultView = new GUI.CombatView();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,49 +87,59 @@ public class NapakalakiView extends javax.swing.JFrame{
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
         .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(layout.createSequentialGroup()
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(L_CombatView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(B_MTM, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, Short.MAX_VALUE)
-            .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addContainerGap())
+              .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(L_CombatView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(B_MTM, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(L_CombatResultView, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)))
+            .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(layout.createSequentialGroup()
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 636, Short.MAX_VALUE)
+            .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addGap(25, 25, 25))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+      .addGroup(layout.createSequentialGroup()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(L_MonsterView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(layout.createSequentialGroup()
-            .addGap(59, 59, 59)
+            .addGap(49, 49, 49)
             .addComponent(B_MTM, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(B_Combat, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(B_NextTurn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(31, 31, 31)
-            .addComponent(L_CombatView, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        .addComponent(B_Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap())
-      .addGroup(layout.createSequentialGroup()
-        .addContainerGap()
-        .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(23, Short.MAX_VALUE))
+            .addGap(30, 30, 30)
+            .addComponent(L_CombatResultView, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(L_CombatView, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(layout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(L_PlayerView, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addGap(0, 0, Short.MAX_VALUE))
     );
 
     L_MonsterView.getAccessibleContext().setAccessibleName("L_MonsterView");
     L_PlayerView.getAccessibleContext().setAccessibleName("L_PlayerView");
     L_CombatView.getAccessibleContext().setAccessibleName("L_CombatView");
+    L_CombatResultView.getAccessibleContext().setAccessibleName("L_CombatResultView");
 
     pack();
     setLocationRelativeTo(null);
@@ -151,23 +162,28 @@ public class NapakalakiView extends javax.swing.JFrame{
 
   private void B_CombatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CombatActionPerformed
     CombatResult cr = napakalakiModel.getCurrentPlayer().combat(napakalakiModel.getCurrentMonster());   
-    L_CombatView.setCombatView(cr);
-    L_CombatView.repaint();
+    L_CombatResultView.setCombatView(cr);
+    L_CombatResultView.setVisible(true);
+    L_CombatResultView.repaint();
     B_MTM.setEnabled(false);
     B_Combat.setEnabled(false);
     B_NextTurn.setEnabled(true);
     L_PlayerView.B_StealTreasure.setEnabled(true);
+    repaint();
+    revalidate();
   }//GEN-LAST:event_B_CombatActionPerformed
 
   private void B_NextTurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_NextTurnActionPerformed
     L_MonsterView.setVisible(false);
-    napakalakiModel.nextTurn();
-    L_PlayerView.B_MakeVisible.setEnabled(true);
-    L_PlayerView.B_StealTreasure.setEnabled(false);
-    L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
-    L_PlayerView.repaint();
-    B_NextTurn.setEnabled(false);
-    B_MTM.setEnabled(true);
+    L_CombatResultView.setVisible(false);
+    if(napakalakiModel.nextTurn()){
+      L_PlayerView.B_MakeVisible.setEnabled(true);
+      L_PlayerView.B_StealTreasure.setEnabled(false);
+      L_PlayerView.setPlayer(napakalakiModel.getCurrentPlayer());
+      L_PlayerView.repaint();
+      B_NextTurn.setEnabled(false);
+      B_MTM.setEnabled(true);
+    }
     repaint();
   }//GEN-LAST:event_B_NextTurnActionPerformed
 
@@ -177,6 +193,7 @@ public class NapakalakiView extends javax.swing.JFrame{
   private javax.swing.JButton B_Exit;
   private javax.swing.JButton B_MTM;
   private javax.swing.JButton B_NextTurn;
+  private GUI.CombatView L_CombatResultView;
   private GUI.CombatView L_CombatView;
   private GUI.MonsterView L_MonsterView;
   private GUI.PlayerView L_PlayerView;

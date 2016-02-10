@@ -16,15 +16,10 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="L_LOSE" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="L_WIN" min="-2" max="-2" attributes="0"/>
-                  <Component id="L_LOSEANDCONVERT" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="L_WINGAME" min="-2" pref="287" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
-          </Group>
+          <Component id="L_LOSEANDCONVERT" alignment="0" max="32767" attributes="0"/>
+          <Component id="L_WINGAME" alignment="0" max="32767" attributes="0"/>
+          <Component id="L_LOSE" alignment="0" max="32767" attributes="0"/>
+          <Component id="L_WIN" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -45,7 +40,7 @@
     <Component class="javax.swing.JLabel" name="L_LOSE">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comfortaa" size="25" style="1"/>
+          <Font name="Comfortaa" size="20" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="10" green="10" red="cf" type="rgb"/>
@@ -59,7 +54,7 @@
     <Component class="javax.swing.JLabel" name="L_LOSEANDCONVERT">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comfortaa" size="25" style="1"/>
+          <Font name="Comfortaa" size="20" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="10" green="10" red="cf" type="rgb"/>
@@ -73,7 +68,7 @@
     <Component class="javax.swing.JLabel" name="L_WIN">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comfortaa" size="25" style="1"/>
+          <Font name="Comfortaa" size="20" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="10" green="10" red="cf" type="rgb"/>
@@ -87,7 +82,7 @@
     <Component class="javax.swing.JLabel" name="L_WINGAME">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comfortaa" size="25" style="1"/>
+          <Font name="Comfortaa" size="20" style="1"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="10" green="10" red="cf" type="rgb"/>

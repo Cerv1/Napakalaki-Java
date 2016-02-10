@@ -63,19 +63,19 @@ public class CombatView extends javax.swing.JPanel {
     L_WIN = new javax.swing.JLabel();
     L_WINGAME = new javax.swing.JLabel();
 
-    L_LOSE.setFont(new java.awt.Font("Comfortaa", 1, 25)); // NOI18N
+    L_LOSE.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
     L_LOSE.setForeground(new java.awt.Color(207, 16, 16));
     L_LOSE.setText("¡Has perdido el combate!");
 
-    L_LOSEANDCONVERT.setFont(new java.awt.Font("Comfortaa", 1, 25)); // NOI18N
+    L_LOSEANDCONVERT.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
     L_LOSEANDCONVERT.setForeground(new java.awt.Color(207, 16, 16));
     L_LOSEANDCONVERT.setText("¡Te conviertes en sectario!");
 
-    L_WIN.setFont(new java.awt.Font("Comfortaa", 1, 25)); // NOI18N
+    L_WIN.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
     L_WIN.setForeground(new java.awt.Color(207, 16, 16));
     L_WIN.setText("¡Has ganado el combate!");
 
-    L_WINGAME.setFont(new java.awt.Font("Comfortaa", 1, 25)); // NOI18N
+    L_WINGAME.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
     L_WINGAME.setForeground(new java.awt.Color(207, 16, 16));
     L_WINGAME.setText("¡Has ganado la partida!");
 
@@ -83,13 +83,10 @@ public class CombatView extends javax.swing.JPanel {
     this.setLayout(layout);
     layout.setHorizontalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(layout.createSequentialGroup()
-        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(L_LOSE)
-          .addComponent(L_WIN)
-          .addComponent(L_LOSEANDCONVERT)
-          .addComponent(L_WINGAME, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+      .addComponent(L_LOSEANDCONVERT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addComponent(L_WINGAME, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addComponent(L_LOSE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+      .addComponent(L_WIN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
