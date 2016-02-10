@@ -68,15 +68,15 @@ public class CombatView extends javax.swing.JPanel {
     L_LOSE.setText("¡Has perdido el combate!");
 
     L_LOSEANDCONVERT.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
-    L_LOSEANDCONVERT.setForeground(new java.awt.Color(207, 16, 16));
+    L_LOSEANDCONVERT.setForeground(new java.awt.Color(253, 105, 4));
     L_LOSEANDCONVERT.setText("¡Te conviertes en sectario!");
 
     L_WIN.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
-    L_WIN.setForeground(new java.awt.Color(207, 16, 16));
+    L_WIN.setForeground(new java.awt.Color(46, 64, 208));
     L_WIN.setText("¡Has ganado el combate!");
 
     L_WINGAME.setFont(new java.awt.Font("Comfortaa", 1, 20)); // NOI18N
-    L_WINGAME.setForeground(new java.awt.Color(207, 16, 16));
+    L_WINGAME.setForeground(new java.awt.Color(40, 207, 16));
     L_WINGAME.setText("¡Has ganado la partida!");
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

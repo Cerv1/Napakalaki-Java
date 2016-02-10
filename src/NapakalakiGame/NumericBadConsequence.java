@@ -47,14 +47,14 @@ public class NumericBadConsequence  extends BadConsequence{
         int nVis, nHid;
         
         if(nVisibleTreasures>v.size())
-            nVis=nVisibleTreasures;
-        else
             nVis=v.size();
+        else
+            nVis=nVisibleTreasures;
         
         if(nHiddenTreasures>h.size())
-            nHid=nHiddenTreasures;
-        else
             nHid=h.size();
+        else
+            nHid=nHiddenTreasures;
        
         
         BadConsequence bcAjustado = new NumericBadConsequence(getText(),0, nVis, nHid);
