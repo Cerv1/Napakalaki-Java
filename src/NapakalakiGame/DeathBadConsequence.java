@@ -11,7 +11,7 @@ public class DeathBadConsequence extends NumericBadConsequence{
     private boolean death;
     
     public DeathBadConsequence(String t){
-        super(t, 0, -1, -1);
+        super(t, 0, 0, 0);
         death=true;
     }
        public boolean getDeath(){
