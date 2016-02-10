@@ -264,7 +264,7 @@ public class PlayerView extends javax.swing.JPanel{
   }// </editor-fold>//GEN-END:initComponents
 
     private void B_StealTreasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_StealTreasureActionPerformed
-      if(playerModel.canISteal() && playerModel.getEnemy().getHiddenTreasures().size()!=0){
+      if(playerModel.canISteal() && !playerModel.getEnemy().getHiddenTreasures().isEmpty()){
         Treasure t = playerModel.stealTreasure();
         TreasureView tv = new TreasureView();
         tv.setTreasure(t);
