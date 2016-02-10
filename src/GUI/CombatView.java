@@ -31,9 +31,10 @@ public class CombatView extends javax.swing.JPanel {
             L_LOSEANDCONVERT.setVisible(false);
         }
         else if(cr==CombatResult.LOSEANDCONVERT){
+            L_LOSE.setVisible(true);
             L_LOSEANDCONVERT.setVisible(true);
             L_WIN.setVisible(false);
-            L_LOSE.setVisible(false);
+
         }
         else{
           L_WINGAME.setVisible(true);
