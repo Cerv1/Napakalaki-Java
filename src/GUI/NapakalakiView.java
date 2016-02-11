@@ -158,6 +158,7 @@ public class NapakalakiView extends javax.swing.JFrame{
     B_NextTurn.setEnabled(false);
     B_Combat.setEnabled(true);
     repaint();
+    revalidate();
   }//GEN-LAST:event_B_MTMActionPerformed
 
   private void B_CombatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_CombatActionPerformed
@@ -185,6 +186,7 @@ public class NapakalakiView extends javax.swing.JFrame{
       B_MTM.setEnabled(true);
     }
     repaint();
+    revalidate();
   }//GEN-LAST:event_B_NextTurnActionPerformed
 
 
