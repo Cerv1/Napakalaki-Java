@@ -19,7 +19,7 @@ public class PlayerView extends javax.swing.JPanel{
     public Player playerModel;
     public BadConsequenceView badConsequenceModel=new BadConsequenceView();
     private Napakalaki napakalakiModel=Napakalaki.getInstance();
-    
+   
     public PlayerView(){
       initComponents();
       B_StealTreasure.setEnabled(false);
@@ -62,7 +62,8 @@ public class PlayerView extends javax.swing.JPanel{
       L_PlayerLevel.setText(String.valueOf(playerModel.getLevels()));
       L_PlayerCombatLevel.setText(String.valueOf(playerModel.getCombatLevel()));
       L_PlayerEnemy.setText(String.valueOf(playerModel.getEnemy().getName()));
-      
+      L_NCultists.setText(String.valueOf(CultistPlayer.getTotalCultistPlayers()));
+      L_NCultists.repaint();
       if(playerModel.getPendingBadConsequence()!=null)
         L_PendingModel.setPendingBadConsequence(playerModel.getPendingBadConsequence());
       
@@ -111,6 +112,8 @@ public class PlayerView extends javax.swing.JPanel{
     jLabel7 = new javax.swing.JLabel();
     jLabel8 = new javax.swing.JLabel();
     L_isCultist = new javax.swing.JLabel();
+    jLabel9 = new javax.swing.JLabel();
+    L_NCultists = new javax.swing.JLabel();
 
     B_StealTreasure.setFont(new java.awt.Font("Oxygen-Sans Sans-Book", 0, 11)); // NOI18N
     B_StealTreasure.setText("Steal Treasure");
@@ -186,6 +189,11 @@ public class PlayerView extends javax.swing.JPanel{
 
     L_isCultist.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
 
+    jLabel9.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+    jLabel9.setText("NumberOfCultists");
+
+    L_NCultists.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
     this.setLayout(layout);
     layout.setHorizontalGroup(
@@ -222,11 +230,16 @@ public class PlayerView extends javax.swing.JPanel{
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(L_PlayerCombatLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
       .addComponent(jLabel7)
-      .addComponent(L_PendingModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-      .addGroup(layout.createSequentialGroup()
-        .addComponent(jLabel8)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(L_isCultist, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+          .addComponent(jLabel8)
+          .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+          .addComponent(L_isCultist, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addGap(29, 29, 29)
+          .addComponent(jLabel9)
+          .addGap(18, 18, 18)
+          .addComponent(L_NCultists, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(L_PendingModel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,7 +260,10 @@ public class PlayerView extends javax.swing.JPanel{
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
           .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(L_isCultist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+          .addComponent(L_isCultist, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(L_NCultists, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(jLabel7)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -281,6 +297,7 @@ public class PlayerView extends javax.swing.JPanel{
     B_DiscardAllTreasures.getAccessibleContext().setAccessibleName("B_DiscardAllTreasures");
     L_PendingModel.getAccessibleContext().setAccessibleName("L_PendingModel");
     L_isCultist.getAccessibleContext().setAccessibleName("L_isCultist");
+    L_NCultists.getAccessibleContext().setAccessibleName("L_NCultists");
   }// </editor-fold>//GEN-END:initComponents
 
     private void B_StealTreasureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B_StealTreasureActionPerformed
@@ -318,6 +335,7 @@ public class PlayerView extends javax.swing.JPanel{
   protected javax.swing.JButton B_DiscardTreasure;
   protected javax.swing.JButton B_MakeVisible;
   protected javax.swing.JButton B_StealTreasure;
+  private javax.swing.JLabel L_NCultists;
   public GUI.PendingBadConsequenceView L_PendingModel;
   private javax.swing.JLabel L_PlayerCombatLevel;
   private javax.swing.JLabel L_PlayerEnemy;
@@ -334,6 +352,7 @@ public class PlayerView extends javax.swing.JPanel{
   private javax.swing.JLabel jLabel6;
   private javax.swing.JLabel jLabel7;
   private javax.swing.JLabel jLabel8;
+  private javax.swing.JLabel jLabel9;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JScrollPane jScrollPane2;
   private javax.swing.JScrollPane jScrollPane3;

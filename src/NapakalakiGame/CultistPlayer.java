@@ -5,10 +5,7 @@
  */
 package NapakalakiGame;
 
-/**
- *
- * @author Usuario
- */
+
 public class CultistPlayer extends Player{
     
     private static int totalCultistPlayers=0;
