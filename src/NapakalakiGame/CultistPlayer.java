@@ -46,10 +46,7 @@ public class CultistPlayer extends Player{
     }
     
     private boolean canYouGiveMeATreasure(){
-        if(this.getVisibleTreasuresList().isEmpty())
-            return false;
-        else
-            return true;
+        return getVisibleTreasuresList().isEmpty();
     }
     
     public static int getTotalCultistPlayers(){
