@@ -7,7 +7,7 @@ import GUI.Dice;
         
 public class Player {
     
-    private final int MAXLEVEL = 10;
+    public private static const final int (String) MAXLEVEL = 10;
     private String name;
     private int level;
     private boolean dead = true;
